@@ -1,0 +1,51 @@
+\documentclass[titlepage]{article}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{language=[LaTeX]TeX,breaklines=true,basicstyle=\tt\scriptsize,keywordstyle=\color{blue},identifierstyle=\color{magenta}}
+%\lstset{language=[LaTeX]TeX,breaklines=true}
+\title{\LaTeX \ for Theses --- Workbook}
+\author{Dr Thomas Bishop \& Dr Gerard Capes}
+\date{17\textsuperscript{th} November, 2016}
+\begin{document}
+\maketitle
+\section{Exercise 1 --- Opening TeXNicCentre}
+\begin{enumerate}
+	\item Navigate \texttt{Start > All Programs > Programming Languages > TeXNicCentre} and open the application. 
+	\item You may need to configure the application on first run; accept the defaults. This uses the MiKTeX \LaTeX \ distribution that has already been installed.
+	\item In the top menu ribbon, change the compiler from \texttt{\LaTeX \ > DVI} to \texttt{\LaTeX \ > PDF}.
+\end{enumerate}
+\section{Exercise 2 --- Hello World!}
+\begin{enumerate}
+	\item Create a new document.
+	\item In the writing pane, write the following lines: 		
+\begin{lstlisting}
+\documentclass{article}	
+\begin{document}				
+Hello World							
+\end{document}					
+\end{lstlisting}	
+	\item Save the file.
+	\item Click on the compile button.
+	\item Open the pdf file.
+\end{enumerate}	
+\section{Exercise 3 --- Customise the University Thesis Document}
+\section{Exercise 4 --- Adding a Chapter}
+\section{Exercise 5 --- Referencing}
+\section{Exercise 6 --- Cross-referencing}
+\section{Exercise 7 --- Adding Figures}
+\section{Exercise 8 --- Drawing Tables}
+\section{Exercise 9 --- Writing Equations}
+\section{Exercise 10 --- Inserting a quote}
+Try inserting a quote using the \lstinline!\quote! environment:
+\begin{lstlisting}
+\begin{quote}
+I think therefore I use \LaTeX for typesetting. 
+\end{quote}
+\end{lstlisting}
+\section{Exercise 11 --- Escaped \& Special Characters}
+Try using reserved characters like \&, \textbackslash, and \%, and you'll run into difficulty. Try writing the following:
+\begin{lstlisting}
+If you need to write an ampersand (\&), use the slash to escape or it will not render. 							
+Similarly, if you wanted to use a slash or backslash (\backslash), you must use a command. If you need accents, they are often produced l\'ike that. 	
+\end{lstlisting}
+\end{document}
