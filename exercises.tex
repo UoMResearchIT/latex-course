@@ -3,37 +3,44 @@
 \usepackage{xcolor}
 \usepackage{listings}
 \usepackage{fullpage}
+\usepackage[type={CC},modifier={by-sa},version={4.0},]{doclicense}
 \lstset{language=[LaTeX]TeX,breaklines=true,basicstyle=\tt\normalsize,keywordstyle=\color{blue},identifierstyle=\color{magenta}}
+
 \title{\LaTeX \ for Theses --- Workbook}
-\author{Dr Thomas Bishop \& Dr Gerard Capes}
-\date{17\textsuperscript{th} November, 2016}
+\author{Dr Thomas Bishop \and Dr Gerard Capes}
+\date{17\textsuperscript{th} of November, 2016}
+
 \begin{document}
+
 \maketitle
-\section{Opening TeXNicCentre}
-\begin{enumerate}
-	\item Navigate \texttt{Start > All Programs > Programming Languages > TeXNicCentre} and open the application. 
-	\item You may need to configure the application on first run; accept the defaults. This uses the MiKTeX \LaTeX \ distribution that has already been installed.
-	\item In the top menu ribbon, change the compiler from \texttt{\LaTeX \ > DVI} to \texttt{\LaTeX \ > PDF}.
-\end{enumerate}
+
+\section{Opening \TeX nicCentre}
+	\begin{enumerate}
+		\item Navigate \texttt{Start > All Programs > Programming Languages > TeXNicCentre} and open the application. 
+		\item You may need to configure the application on first run; accept the defaults. This uses the MiKTeX \LaTeX \ distribution that has already been installed.
+		\item In the top menu ribbon, change the compiler from \texttt{\LaTeX \ > DVI} to \texttt{\LaTeX \ > PDF}.
+	\end{enumerate}
+
 \section{Hello World!}
-\begin{enumerate}
-	\item Create a new document.
-	\item In the writing pane, write the following lines: 		
-\begin{lstlisting}
+	\begin{enumerate}
+		\item Create a new document.
+		\item In the writing pane, write the following lines: 		
+			\begin{lstlisting}
 \documentclass{article}	
-\begin{document}				
-Hello World							
-\end{document}					
-\end{lstlisting}	
-	\item Save the file.
-	\item Click on the compile button.
-	\item Open the pdf file.
-\end{enumerate}	
+	\begin{document}				
+		Hello World							
+	\end{document}					
+			\end{lstlisting}	
+		\item Save the file.
+		\item Click on the compile button.
+		\item Open the \texttt{*.pdf} file.
+	\end{enumerate}	
+
 \section{Customise the University Thesis Document}
-For the following exercises, recompile the document after you have completed each set of changes
-\begin{enumerate}	
-	\item Find and modify the following lines:
-	\begin{lstlisting}
+	For the following exercises, recompile the document after you have completed each set of changes.
+		\begin{enumerate}	
+			\item Find and modify the following lines:
+				\begin{lstlisting}
 \begin{document}
 ...
 \title{The University Thesis File}
@@ -41,29 +48,29 @@ For the following exercises, recompile the document after you have completed eac
 % Faculty of Life Sciences people should comment the next line out
 \school{The Author's school}
 \faculty{The Author's faculty}
-	\end{lstlisting}
-	\item Find and modify the contents of the abstract (located between \lstinline|\beforeabstract| and \lstinline|\afterabstract|)
-	\item Add some acknowledgements in the section immediately after \lstinline|\prefacesection{Acknowledgements}|
-\end{enumerate}
+				\end{lstlisting}
+			\item Find and modify the contents of the abstract (located between \lstinline|\beforeabstract| and \lstinline|\afterabstract|).
+			\item Add some acknowledgements in the section immediately after \lstinline|\prefacesection{Acknowledgements}|.
+		\end{enumerate}
 
 \section{Adding a Chapter}
 	\begin{enumerate}
 		\item Create a new document.
 		\item Type \lstinline|\chapter{Methodology}| in the writing pane to define it as the start of a chapter.
-		\item Try some different writing commands, using the examples below:
-		\begin{lstlisting}[upquote=true]
+		\item Try some different writing commands, using the following examples:
+			\begin{lstlisting}[upquote=true]
 This is going to include some ``quoted text''.				
 Some characters are reserved (i.e. they have a special purpose) but can be accessed by escaping with a backslash, e.g. \%.
 To use italics, try \textit{using this command!}.
 Math mode is contained within dollars, e.g. $\delta$.
-		\end{lstlisting}
-		\item Include this chapter file in the main thesis.tex after the other included *.tex file. If you saved your chapter file as `mychapter.tex', use the command \lstinline|\include{mychapter}|.
-		\item Recompile the thesis.tex file.
+			\end{lstlisting}
+		\item Include this chapter file in the main \texttt{thesis.tex} after the other included \texttt{*.tex} file. If you saved your chapter file as `\texttt{mychapter.tex}', use the command \lstinline|\include{mychapter}|.
+		\item Recompile the \texttt{thesis.tex} file.
 	\end{enumerate}
 	
 \section{Referencing}
 	\begin{enumerate}
-		\item Open the thesis document and ensure the \lstinline|\bibliography{}| command points to the bibliography database (the .bib file).
+		\item Open the thesis document and ensure the \lstinline|\bibliography{}| command points to the bibliography database (the \texttt{*.bib} file).
 		\item Open your new chapter file, start a new paragraph (insert a blank line) then add some referencing commands using references from the bibliography file. Some examples are given below:
 		\begin{lstlisting}
 \citep{Payne2011}		
@@ -78,23 +85,79 @@ Math mode is contained within dollars, e.g. $\delta$.
 \section{Cross-referencing}
 	\begin{enumerate}
 		\item Add a reference label to the chapter, using the command \lstinline|\label{ch:mychapter}|.
-		\item Cross reference the chapter, e.g. As described in chapter \lstinline|\ref{ch:mychapter}|, this document is written in \LaTeX.
+		\item Cross reference the chapter, e.g. 
+			\begin{lstlisting}
+As described in chapter \ref{ch:mychapter}, this document is written in \LaTeX.
+			\end{lstlisting}
 		\item Remember you'll need to use a unique name inside the curly braces for each section, chapter, figure etc.
 	\end{enumerate}
+	
 \section{Adding Figures}
+	\begin{enumerate}
+		\item Use the following code to add a figure:
+			\begin{lstlisting}
+\begin{figure}[htbp]							
+	\centering								
+		\includegraphics[width=1\textwidth]{example-image-a}
+	\caption[Short caption]{Long caption}			
+	\label{labeltexthere}						
+\end{figure}
+		\end{lstlisting}
+		\item Try modifying the terms in the square brackets after \lstinline!\includegraphics!; experiment with \lstinline!\pageheight! or \lstinline!keepaspectratio!. Try using multiple terms separated with a comma (\lstinline!,!). 
+		\item Now try the \lstinline!\sidewaysfigure! package. Remember you might need to add it to the preamble!
+	\end{enumerate}
+	
 \section{Drawing Tables}
+	\begin{enumerate}
+		\item Create a table using the following lines of code:
+			\begin{lstlisting}
+\begin{table}[htbp]						
+	\centering							
+	\begin{tabular}{lcc}					
+		\toprule						
+			Name    & Age & Gender \\ \midrule	
+			Tom     & 26  & Male   \\			
+			James   & 22  & Male   \\			
+			Eleanor & 25  & Female \\			
+		\bottomrule					
+	\end{tabular}						
+	\caption[Short caption]{Long caption}		
+	\label{}							
+\end{table}
+			\end{lstlisting}
+		\item Try adding a column for attendance by adding \lstinline!c! to the \lstinline!\begin{tabular}{lcc}! and some data to each row.
+		\item Remember cells are separated with an ampersand (\lstinline!&!), so you'll need to add this to each row.
+	\end{enumerate}
+	
 \section{Writing Equations}
+	\begin{enumerate}
+		\item Create an equation using the following code as an example:
+			\begin{lstlisting}
+\begin{equation}			
+	e=mc^{2}			
+\label{massenergyequiv}	
+\end{equation}
+			\end{lstlisting}
+		\item Reference the equation in the text using \lstinline!\ref{massenergyequiv}!.
+	\end{enumerate}
+
 \section{Inserting a quote}
-Try inserting a quote using the \lstinline!\quote! environment:
-\begin{lstlisting}
+	Try inserting a quote using the \lstinline!\quote! environment:
+		\begin{lstlisting}
 \begin{quote}
 I think therefore I use \LaTeX for typesetting. 
 \end{quote}
-\end{lstlisting}
+		\end{lstlisting}
+
 \section{Escaped \& Special Characters}
-Try using reserved characters like \&, \textbackslash, and \%, and you'll run into difficulty. Try writing the following:
-\begin{lstlisting}
+	Try using reserved characters like \&, \textbackslash, and \%, and you'll run into difficulty. Try writing the following:
+		\begin{lstlisting}
 If you need to write an ampersand (\&), use the slash to escape or it will not render. 							
 Similarly, if you wanted to use a slash or backslash (\backslash), you must use a command. If you need accents, they are often produced l\'ike that. 	
-\end{lstlisting}
+		\end{lstlisting}
+
+\begin{figure}[b]
+\doclicenseThis
+\end{figure}
+
 \end{document}

@@ -1,6 +1,8 @@
 \documentclass{beamer}
 \usepackage{tabularx}
 \usepackage{tikz}
+\usepackage{hyperref}
+\usepackage[type={CC},modifier={by-sa},version={4.0},]{doclicense}
 \usetikzlibrary{shapes.geometric, arrows}
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
 \tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
@@ -12,94 +14,150 @@
 \subtitle{An Introductory Course}
 \author{Dr Thomas Bishop \and Dr Gerard Capes}
 \institute{University of Manchester}
-\date{17\textsuperscript{th} November, 2016}
-\logo{\includegraphics[width=2cm]{UniOfManchesterLogo.pdf}}
+\date{17\textsuperscript{th} of November, 2016}
+\logo{\includegraphics[width=0.15\paperwidth]{UniOfManchesterLogo.pdf}}
 
 \begin{document}
 
 \begin{frame}
-\titlepage
+	\titlepage
 \end{frame}
 
 \section{Introduction}
 
-\begin{frame}
-\frametitle{Staff}
-\begin{itemize}
-	\item Tom Bishop
-	\item Gerard Capes
-\end{itemize}
+\begin{frame} \frametitle{Staff}
+	\begin{block}{Tom Bishop}
+			\begin{itemize}
+				\item Laboratory Technician, Geography
+					\item \url{thomasbishop.uk}
+					\item \url{github.com/tombishop1}
+			\end{itemize}
+		\end{block}
+	\begin{block}{Gerard Capes}
+		\begin{itemize}
+			\item IT Software Engineer, IT Services
+			\item \url{github.com/gcapes}
+		\end{itemize}
+	\end{block}
 \end{frame}
 
 \begin{frame}
-\frametitle{Course Structure}
-\tableofcontents
+	\frametitle{Course Structure}
+	\tableofcontents
 \end{frame}
 
-\begin{frame}
-\frametitle{What We \textbf{Won't} Be Covering}
-\begin{itemize}
-	\item How to use \LaTeX \ to typeset other documents (papers, reports, slides, \textit{etc}.),
-	\item How to install \LaTeX \ on a Windows/Mac/Unix system,
-	\item Every possible option, setting, package or trick,
-	\item Image editing or drafting diagrams.
-\end{itemize}
+\begin{frame} \frametitle{What We \textbf{Won't} Be Covering}
+	\begin{itemize}
+		\item How to use \LaTeX \ to typeset other documents (papers, reports, slides, \textit{etc}.),
+		\item How to install \LaTeX \ on a Windows/Mac/Unix system,
+		\item Every possible option, setting, package or trick,
+		\item Image editing or drafting diagrams.
+	\end{itemize}
 \end{frame}
 
 \section{What Is \LaTeX?}
 
-\begin{frame}
-\frametitle{What Is \LaTeX?}
-\begin{itemize}
-	\item Software for typesetting.
-	\item Totally free and available on many platforms.
-	\item Popular in publishing technical and/or large documents.
-	\item \textbf{A markup language (content and form are separated).}
-\end{itemize}
+\begin{frame} \frametitle{What Is \LaTeX?}
+	\begin{itemize}
+		\item Software for typesetting.
+		\item Totally free and available on many platforms.
+		\item Popular in publishing technical and/or large documents.
+		\item \textbf{A markup language (content and form are separated).}
+	\end{itemize}
 \end{frame}
 
-\begin{frame}
-\frametitle{Is it For Me?}
-\begin{columns}
-\column{0.5\textwidth}
-\begin{itemize}
-	\item Produces beautiful, professional documents.
-	\item There is almost certainly an elegant solution to your typesetting problem.
-	\item You can logically work out how to solve an error.
-\end{itemize}
-\column{0.5\textwidth}
-\begin{itemize}
-	\item What you see isn’t what you get as you write and edit.
-	\item You might have to research how to solve the problem.
-	\item You will need to learn how to work with markup language.
-\end{itemize}
-\end{columns}
-
+\begin{frame} \frametitle{Is it For Me?}
+	\begin{columns}
+		\column{0.5\textwidth}
+			\begin{itemize}
+				\item Produces beautiful, professional documents.
+				\item There is almost certainly an elegant solution to your typesetting problem.
+				\item You can logically work out how to solve an error.
+			\end{itemize}
+		\column{0.5\textwidth}
+			\begin{itemize}
+				\item What you see isn’t what you get as you write and edit.
+				\item You might have to research how to solve the problem.
+				\item You will need to learn how to work with markup language.
+			\end{itemize}
+	\end{columns}
 \end{frame}
 
-\section{How \LaTeX Works}
+\section{How \LaTeX \ Works}
 
-\begin{frame} \frametitle{The Compiler}
-\begin{tikzpicture}[node distance=2cm]
-\node (start) [startstop] 							{TexnicCenter Generated Markup};
-\node (pro1)  [process, below of=start] {\LaTeX};			%both this box and the TeX box below it need to be in a larger box marked MiKTeX
-\node (pro2)  [process, below of=pro1] 	{TeX};
-\node (stop)  [startstop, below of=pro2] {PDF Output};
-\draw [arrow] (start) -- (pro1);
-\draw [arrow] (pro1) -- (pro2);
-\draw [arrow] (pro2) -- (stop);	
-\end{tikzpicture}
+\begin{frame} \frametitle{The Software}	
+	\begin{center}
+		\begin{tikzpicture}[node distance=0.15\paperwidth]
+			\draw [black] (3.5,-1) rectangle (-2,-4.75);
+			\node at (2.5,-4.25) {MiK\TeX};
+			\node (start) [startstop] 								{Markup Text (from \TeX nicCenter)};
+			\node (pro1)  [process, below of=start] 	{\LaTeX};
+			\node (pro2)  [process, below of=pro1] 		{\TeX};
+			\node (stop)  [startstop, below of=pro2] 	{PDF Output};
+			\draw [arrow] (start) -- (pro1);
+			\draw [arrow] (pro1) -- (pro2);
+			\draw [arrow] (pro2) -- (stop);	
+		\end{tikzpicture}
+	\end{center}
 \end{frame}
 
 \section{The University Thesis Document}
 
 \begin{frame} \frametitle{The University Thesis Document Files}
-\begin{block}{Style Sheet}
-Tells \LaTeX \ how to compose the document.
-\end{block}
-\begin{block}{Thesis Itself}
-The ``backbone'' of the document to which you add chapters.
-\end{block}
+	\begin{block}{Style Sheet}
+		Tells \LaTeX \ how to compose the document.
+	\end{block}
+	\begin{block}{Thesis Itself}
+		The ``backbone'' of the document to which you add chapters.
+	\end{block}
+\end{frame}
+
+\begin{frame} \frametitle{How do Files Link?}
+\begin{center}
+		\begin{tikzpicture}[node distance=0.15\paperwidth]
+			\node (pro1)  [process] 	{Thesis File};
+			\node (pro2) [process, right of=pro1, xshift=2cm] {Chapter 1};
+			\node (pro3) [process, below of=pro2] {Chapter 2};
+			\node (pro4) [process, right of=pro3, xshift=2cm] {\includegraphics[width=1cm,keepaspectratio]{example-image-a}};
+			\node (pro5) [process, below of=pro1] {Bib\TeX \ Database};
+			\draw (pro1) -- (pro2);
+			\draw (pro1) -- (pro3);
+			\draw (pro3) -- (pro4);
+			\draw (pro1) -- (pro5);
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\section{Getting Help and Helping Yourself}
+
+\begin{frame} \frametitle{The Minimum Worked Example}	
+	\begin{itemize}
+		\item Designed so other users can understand what you are talking about and re-create the problem.
+		\item No-one is going to troubleshoot hundreds of lines of code.
+		\item Remember you are using a custom stylesheet --- try to provide MWE's in native document classes.
+	\end{itemize}
+\end{frame}
+
+\begin{frame} \frametitle{Resources}
+	\begin{itemize}
+		\item \href{http://www.github.com/tombishop1/thesis-latex-manc-coursematerials}{The Course Resources}
+		\item \href{http://tex.stackexchange.com}{\LaTeX \ Stack Exchange}
+		\item \href{https://wch.github.io/latexsheet/}{\LaTeX \ Cheat Sheet}
+		\item \href{https://en.wikibooks.org/wiki/LaTeX}{The \LaTeX \ Wikibook}
+		\item \href{https://www.ctan.org/pkg/excel2latex?lang=en}{Excel to \LaTeX \ Converter} and \href{http://www.tablesgenerator.com/}{\LaTeX \ Table Maker}
+	\end{itemize}
+\end{frame}
+
+\begin{frame} \frametitle{Concluding Remarks}
+	\begin{itemize}
+		\item You (probably) don't have to decide now.
+		\item It takes time to learn, but you'll spend time typesetting in any program, and it's a useful skill.
+		\item Discuss feedback, notes, version control and typesetting with your supervisor as soon as you can.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+\doclicenseThis
 \end{frame}
 
 \end{document}
