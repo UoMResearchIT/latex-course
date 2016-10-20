@@ -6,3 +6,8 @@ They were transcribed and adapted from original material produced by Tom Bishop 
 They are usually compiled using pdfTeX; the only auxiliary file required is the University of Manchester logo, of which a copy is included in this repository. 
 
 All of the materials here (excluded the University of Manchester logo) are licenced under CC-BY-SA v4.0; see: https://creativecommons.org/licenses/by-sa/4.0/ for more details.
+
+## BibTeX branch
+This branch uses BibTeX for referencing, while the master branch uses Biber.
+Biber is newer and has more advanced features.
+BibTeX can be simpler to set up, especially for teaching where the desktop environment is more controlled than on a typical user's machine.
