@@ -7,9 +7,7 @@
 \usepackage[type={CC},modifier={by-sa},version={4.0},]{doclicense}
 \usetikzlibrary{shapes.geometric, arrows}
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
-\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
 \tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
-\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
 \title{\LaTeX \ for Theses}
@@ -106,6 +104,45 @@
 \end{frame}
 
 \section{The University Thesis Document}
+
+\begin{frame} \frametitle{\href{http://documents.manchester.ac.uk/DocuInfo.aspx?DocID=7420}{Presentation of Theses Policy, June 2014}}	
+\framesubtitle{Failure to follow these instructions may result in the faculty rejecting the thesis for examination.}
+	\begin{itemize}
+		\only<1>{
+			\item ``all theses must be submitted...as a single [PDF] file''
+			\item ``each volume of the print copies must include the approved electronically generated cover-page''
+			\item ``students may make available...a redacted version''
+			\item ``double or 1.5 spacing in a font type which ensures readability...[e.g.] 10 point Arial or 12 point Times''
+			\item ``single spacing may be used for quotations, footnotes and references''
+		}
+		\only<2>{			
+			\item ``pages may be single or double-sided''
+			\item ``bibliographic citations and references must be consistent''
+			\item ``to allow for binding the margin at the binding edge of any page must not be less than 40mm; other margins must not be less than 15mm''
+			\item The copyright statement must be included
+			\item ``page numbering must consist of one single sequence of arabic numerals...starting with the title page as page number 1. Page numbers must be displayed on all pages \textbf{EXCEPT} the title page''
+		}
+		\only<3>{			
+			\item ``the main text of the theses should...be left justified''
+			\item ``a list contents [is required]''
+			\item ``the final word count...must be inserted at the bottom of the contents page''
+			\item ``lists of tables, figures, diagrams, photographs, abbreviations etc...recommended...as appropriate...immediately after the contents page(s)''
+			\item ``A short abstract of the contents of the thesis must be inserted into the thesis. The abstract must not be more than one side of A4.''
+		}
+		\only<4>{
+		\item ``The abstract must include'':
+			\begin{itemize}
+				\item ``Name of the university''
+				\item ``Candidate's full name''
+				\item ``Degree Title''
+				\item ``Thesis Title''
+				\item ``Date''
+				\item ``Use[ing] a font size of not less than 12 point''
+				\item ``Use single spaced typing''
+			\end{itemize}
+		}
+	\end{itemize}
+\end{frame}
 
 \begin{frame} \frametitle{The University Thesis Document Files}
 	\begin{block}{Style Sheet}
