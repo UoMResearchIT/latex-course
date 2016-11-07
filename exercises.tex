@@ -36,18 +36,6 @@
 		\item Open the \texttt{*.pdf} file.
 	\end{enumerate}	
 	
-\section{Configure the Compiler Profile}
-	To take advantage of the latest functionality, we need to change the compilers for our thesis document. 
-	\begin{enumerate}
-		\item In the top menu bar, navigate to \texttt{Build > Define Output Profiles}. 
-		\item Select \texttt{LuaLaTeX} and select \texttt{Copy}. 
-		\item From the option marked \texttt{command line arguments to pass to the compiler}, remove the phrase \texttt{-max-print-line=120} so it reads \texttt{-synctex=-1 -interaction=nonstopmode "\%wm"}.
-		\item Name it \texttt{LuaLaTeX to PDF (biber)}, and select the new profile you have created. 
-		\item In the option marked \texttt{Path to Bibtex executable}, change the word \texttt{bibtex} to \texttt{biber}. 
-		\item Exit this menu and select \texttt{LuaLaTeX => PDF (biber)} as your output profile in the drop-down menu. 
-		\item Try compiling the University Thesis Document (press \texttt{F7}). It should compile without reporting any errors. 
-	\end{enumerate}
-
 \section{Customise the University Thesis Document}
 	For the following exercises, recompile the document after you have completed each set of changes.
 		\begin{enumerate}	
