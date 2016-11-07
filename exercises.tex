@@ -81,15 +81,15 @@ Math mode is contained within dollars, e.g. $\delta$.
 	
 \section{Referencing}
 	\begin{enumerate}
-		\item Open the thesis document and ensure the \lstinline|\bibliography{}| command points to the bibliography database (the \texttt{*.bib} file).
+		\item Open the thesis document and ensure the \lstinline|\addbibresource{library.bib}| command points to the bibliography database (the \texttt{*.bib} file).
 		\item Open your new chapter file, start a new paragraph (insert a blank line) then add some referencing commands using references from the bibliography file. Some examples are given below:
 		\begin{lstlisting}
-\citep{Payne2011}		
-\citealp{Porinchu2003,Payne2011}	
-\citet{Payne2011}			
-\citealt{Payne2011}			
-\citep[e.g.][]{Porinchu2003}		
-\citep[][p.245]{Porinchu2003}	
+\parencite{Payne2011}		
+\cite{Porinchu2003,Payne2011}	
+\textcite{Payne2011}			
+\cite*{Payne2011}			
+\parencite[e.g.][]{Porinchu2003}		
+\parencite[][p.245]{Porinchu2003}	
 		\end{lstlisting}
 	\end{enumerate}
 
