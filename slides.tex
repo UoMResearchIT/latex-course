@@ -98,6 +98,7 @@
 			\draw [arrow] (pro2) -- (stop);	
 		\end{tikzpicture}
 	\end{center}
+	\label{pic:software}
 \end{frame}
 
 \begin{frame}[fragile]{Input files}{Some demos of fundamental concepts}
@@ -110,6 +111,18 @@
 		\item Commands have this format \verb|\command[optional parameter]{parameter}|
 		\item Text following a \% symbol is ignored by \LaTeX{}
 	\end{itemize}
+\end{frame}
+
+\begin{frame}{Output files}{I only wanted a pdf!}
+	The software diagram on slide \ref{pic:software} is a simplification. \LaTeX{} outputs a range of files depending on your input file and build profile. These include:
+	\begin{itemize}
+		\item \textbf{.log} - contains the transcript from the last \LaTeX{} run. Lists files loaded and packages used.
+		\item \textbf{.aux} - contains information required for cross-referencing
+		\item \textbf{.bbl} - bibliography info created by Bib\TeX{} - subsequently inserted by \LaTeX{} into the document
+		\item \textbf{.blg} - Bib\TeX{} log file
+		\item \textbf{.synctex.gz} - contains information for jumping between source code and output file
+	\end{itemize}
+	If your .tex file contains cross-references and citations, it will need to be processed several times to resolve the dependencies between the intermediate files. The typical sequence is: \href{http://www.tex.ac.uk/FAQ-usebibtex.html}{latex~bibtex~latex~latex}.
 \end{frame}
 
 \section{The University Thesis Document}
