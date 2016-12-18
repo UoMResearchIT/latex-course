@@ -1,14 +1,27 @@
 \documentclass{beamer}
 \beamertemplatenavigationsymbolsempty
-\usepackage{tabularx}
-\usepackage{tikz}
+
+\setbeamercolor{normal text}{fg=white,bg=black!80}
+\setbeamercolor{title}{fg=yellow,bg=black!80}
+\setbeamercolor{frametitle}{fg=yellow,bg=black!80}
+\setbeamercolor{itemize item}{fg=white}
+\setbeamercolor{itemize subitem}{fg=white}
+\setbeamercolor{block title}{fg=white,bg=black}
+\setbeamercolor{section in toc}{fg=white}
+
+\usepackage[utf8]{inputenc}
+\usepackage{helvet} % options: mathptmx, helvet, avat, bookman, chancery, charter, culer, mathtime, mathptm, newcent, palatino, pifont and utopia
+
 \usepackage{hyperref}
 \hypersetup{colorlinks,linkcolor=,}
 \usepackage[type={CC},modifier={by-sa},version={4.0},]{doclicense}
+
+\usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows}
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
 \tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
-\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzstyle{arrow} = [very thick,->,>=latex]
+\tikzstyle{every node} = [text=black]
 
 \title{Introduction to \LaTeX}
 \subtitle{Typesetting your thesis with \LaTeX}
@@ -87,7 +100,7 @@
 \begin{frame} \frametitle{The Software}	
 	\begin{center}
 		\begin{tikzpicture}[node distance=0.15\paperwidth]
-			\draw [black] (3.5,-1) rectangle (-2,-4.75);
+			\filldraw [gray] (3.5,-1) rectangle (-2,-4.75);
 			\node at (2.5,-4.25) {MiK\TeX};
 			\node (start) [startstop] {Markup Text (from your text editor)};
 			\node (pro1)  [process, below of=start] 	{\LaTeX};
