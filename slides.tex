@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[12pt]{beamer}
 \beamertemplatenavigationsymbolsempty
 
 \setbeamercolor{normal text}{fg=white,bg=black!80}
@@ -64,25 +64,25 @@
 
 \begin{frame} \frametitle{Is it For Me?}
 	\framesubtitle{A few pros and cons}
-	\begin{columns}[t]
-		\column{0.5\textwidth}
+		\only<1>{
 		Advantages
 			\begin{itemize}
-				\item Produces beautiful, professional documents.
+				\item Produces beautiful, professional documents
 				\item There is almost certainly an elegant solution to your typesetting problem.
-				\item You can logically work out how to solve an error.
+				\item You can logically work out how to solve an error
 				\item Encourages you to focus on structure and content - layout is done for you
 				\item `Programming' your document is more fun
 			\end{itemize}
-		\column{0.5\textwidth}
+			}
+		\only<2>{
 		Disadvantages
 			\begin{itemize}
-				\item What you see isn't what you get as you write and edit.
-				\item You might have to research how to solve the problem.
-				\item You will need to learn how to work with markup language.
+				\item What you see isn't what you get as you write and edit
+				\item You might have to research how to solve the problem
+				\item You will need to learn how to work with markup language
 				\item Your co-authors may be very resistant to commenting on a pdf instead of using `track changes' in Word
 			\end{itemize}
-	\end{columns}
+			}
 \end{frame}
 
 \section{How \LaTeX{} Works}
@@ -134,7 +134,14 @@
 		\item \textbf{.blg} - Bib\TeX{} log file
 		\item \textbf{.synctex.gz} - contains information for jumping between source code and output file
 	\end{itemize}
-	If your .tex file contains cross-references and citations, it will need to be processed several times to resolve the dependencies between the intermediate files. The typical sequence is: \href{http://www.tex.ac.uk/FAQ-usebibtex.html}{latex~bibtex~latex~latex}.
+\end{frame}
+
+\begin{frame}{Output files}{Implications for compiling your document}
+	\begin{itemize}
+		\item If your .tex file contains cross-references and citations, it will need to be processed several times to resolve the dependencies between the intermediate files. The typical sequence is: \href{http://www.tex.ac.uk/FAQ-usebibtex.html}{\LaTeX~Bib\TeX~\LaTeX~\LaTeX}.
+		\item If (some of) your citations show up as question marks, it is worth checking the above.
+	\end{itemize}
+	
 \end{frame}
 
 \section{The University Thesis Document}
