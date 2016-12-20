@@ -1,0 +1,59 @@
+% SMALL.TEX -- Released 5 July 1985
+% USE THIS FILE AS A MODEL FOR MAKING YOUR OWN LaTeX INPUT FILE.
+% EVERYTHING TO THE RIGHT OF A  %  IS A REMARK TO YOU AND IS IGNORED
+% BY LaTeX.
+%
+% WARNING!  DO NOT TYPE ANY OF THE FOLLOWING 10 CHARACTERS EXCEPT AS
+% DIRECTED:        &   $   #   %   _   {   }   ^   ~   \
+
+\documentclass[12pt]{article}  % YOUR INPUT FILE MUST CONTAIN THESE
+\usepackage{graphicx}	% Required for figure environment
+
+\begin{document}                  % TWO LINES PLUS THE \end COMMAND AT
+                                  % THE END
+\tableofcontents
+
+\section{Simple Text}          % THIS COMMAND MAKES A SECTION TITLE.
+
+Words are separated by one or    more      spaces.  Paragraphs are
+    separated by one or more blank lines.  The output is not affected
+by adding extra spaces or extra blank lines to the input file.
+
+
+Double quotes are typed like this: ``quoted text''.
+Single quotes are typed like this: `single-quoted text'.
+
+Long dashes are typed as three dash characters---like this.
+
+Italic text is typed like this: \textit{This is italic text}.
+Bold   text is typed like this: \textbf{this is  bold  text}.
+
+\subsection{A Warning or Two}        % THIS MAKES A SUBSECTION TITLE.
+
+If you get too much space after a mid-sentence period---abbreviations
+like etc.\ are the common culprits)---then type a backslash followed by
+a space after the period, as in this sentence.
+
+Remember, don't type the 10 special characters (such as dollar sign and
+backslash) except as directed!  The following seven are printed by
+typing a backslash in front of them:  \$  \&  \#  \%  \_  \{  and  \}.
+The manual tells how to make other symbols.
+
+\section{My own section}
+This is another section, added for the purpose of the exercise.
+Note that this doesn't create a new paragraph.
+
+This does though.	I can leave any  combination of spaces and tabs
+between words and they're just treated as one.
+
+% Include an image file in a figure
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{showers}
+	\caption{typical weather}
+	\label{fig:weather}
+\end{figure}
+
+Typical British weather is depicted in figure \ref{fig:weather}.
+
+\end{document}                    % THE INPUT FILE ENDS LIKE THIS
