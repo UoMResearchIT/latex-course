@@ -7,34 +7,33 @@
 \usepackage[type={CC},modifier={by-sa},version={4.0}]{doclicense}
 \lstset{language=[LaTeX]TeX,breaklines=true,basicstyle=\tt\normalsize,keywordstyle=\color{blue},identifierstyle=\color{magenta}}
 
-\title{\LaTeX \ for Theses --- Workbook}
-\author{Dr Thomas Bishop \and Dr Gerard Capes}
-\date{17\textsuperscript{th} of November, 2016}
+\title{Introduction to \LaTeX{} --- Exercises}
+\author{Dr Gerard Capes}
+\date{\today}
 
 \begin{document}
 
 \maketitle
 
-\section{Opening \TeX nicCentre}
+\section{Opening \TeX studio}
 	\begin{enumerate}
-		\item Navigate \texttt{Start > All Programs > Programming Languages > TeXNicCentre} and open the application. 
+		\item Navigate \texttt{Start > All Programs > Programming Languages > TeXstudio}
 		\item You may need to configure the application on first run; accept the defaults. This uses the MiKTeX \LaTeX \ distribution that has already been installed.
-		\item In the top menu ribbon, change the compiler from \texttt{LaTeX => DVI} to \texttt{LaTeX => PDF}.
+		\item Navigate the menus to \texttt{Options >  Configure TeXstudio > Build} and check that the default compiler is \texttt{PdfLaTeX}
 	\end{enumerate}
 
 \section{Hello World!}
 	\begin{enumerate}
 		\item Create a new document.
-		\item In the writing pane, write the following lines: 		
+		\item In the writing pane, \emph{type} the following lines: 		
 			\begin{lstlisting}
 \documentclass{article}	
-	\begin{document}				
-		Hello World							
-	\end{document}					
+\begin{document}				
+	Hello World							
+\end{document}					
 			\end{lstlisting}	
 		\item Save the file.
-		\item Click on the compile button.
-		\item Open the \texttt{*.pdf} file.
+		\item Click on the \texttt{build and view} button.
 	\end{enumerate}	
 
 \section{Download the University Thesis Document}
