@@ -125,14 +125,31 @@
 	\label{pic:software}
 \end{frame}
 
+\begin{frame}[fragile]{Input files}{Structure of a \LaTeX{} document}
+	\begin{itemize}
+		\item The input for \LaTeX{} is a plain text file with a .tex extension e.g. mypaper.tex. Create this using a text editor or your \LaTeX{} IDE.
+		\item The file must have the following structure:
+		\begin{verbatim}
+		\documentclass[options]{class}
+		<preamble>
+		\begin{document}
+		content...
+		\end{document}
+		\end{verbatim}
+		\item Document classes: article, report, book, letter \ldots
+		\item Preamble lists \textbf{packages} for add-on functionality e.g.
+		\verb|\usepackage{hyperref}|
+	\end{itemize}
+\end{frame}
+
 \begin{frame}[fragile]{Input files}{Some demos of fundamental concepts}
 	% Demonstrate each of these bullet points by creating a new article file
 	\begin{itemize}
-		\item The input for \LaTeX{} is a plain text file with a .tex extension e.g. mypaper.tex. Create this using a text editor or your \LaTeX{} IDE.
+		\item Most IDEs have an option to create a new file using a template
 		\item All whitespace characters (space, tab) are treated the same by \LaTeX{}; consecutive spaces and tabs are treated as one space, and whitespace at the start of a line is generally ignored.
 		\item An empty line creates a new paragraph; consecutive empty lines are treated as one.
 		\item Special characters: the following characters have a special meaning in \LaTeX{}: \# \$ \% \^{} \& \_{} \{ \} \~{} \textbackslash
-		\item Commands have this format \verb|\command[optional parameter]{parameter}|
+		\item \href{https://wch.github.io/latexsheet/latexsheet-a4.pdf}{Commands} have this format \verb|\command[optional parameter]{parameter}|
 		\item Text following a \% symbol is ignored by \LaTeX{}
 	\end{itemize}
 \end{frame}
