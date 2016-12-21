@@ -1,11 +1,11 @@
-# thesis-latex-manc-coursematerials
-These are the course notes to go with thesis-latex-manc.
+# Introduction to LaTeX
+These are the course notes for the [Introduction to LaTeX](http://app.manchester.ac.uk/rlatex) course at the University Of Manchester.
 
-They were transcribed and adapted from original material produced by Tom Bishop in 2014 and 2015, when the course ran at the University of Southampton, by Tom Bishop and Gerard Capes, in 2016.
+They were transcribed and adapted from Tom Bishop's course at the University of Southampton, in a joint effort by Tom Bishop and Gerard Capes.
 
-They are usually compiled using pdfLaTeX; the only auxiliary file required is the University of Manchester logo, of which a copy is included in this repository. 
+The .tex file are usually compiled using pdfLaTeX; the only auxiliary file required is the University of Manchester logo, of which a copy is included in this repository. 
 
-All of the materials here (excluded the University of Manchester logo) are licenced under CC-BY-SA v4.0; see: https://creativecommons.org/licenses/by-sa/4.0/ for more details.
+All of the materials here (excluded the University of Manchester logo) are licenced under [CC-BY-SA v4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 
 ## BibTeX branch
 This branch uses BibTeX for referencing, while the biber branch uses Biber.
