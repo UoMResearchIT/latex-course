@@ -54,7 +54,25 @@
 	\end{enumerate}
 
 \section{Download the University Thesis Document}
-The current version of the University Thesis Document can be downloaded from the Github repository, \url{https://github.com/gcapes/latex-thesis-template}, using the \texttt{Clone or download} option. Ensure you have the correct branch selected --- this version of the course requires the \texttt{bibtex} branch selected.
+	\begin{enumerate}
+		\item A zip file containing the current version of the University Thesis Document can be downloaded from the Github repository, \url{https://github.com/gcapes/latex-thesis-template}, using the \texttt{Clone or download} option. Ensure you have the correct branch selected --- this version of the course requires the \texttt{bibtex} branch to be selected.
+		\item Find the downloaded zip file in Windows explorer, then \texttt{right click > extract all}
+		\item Open \textbf{Git Bash} from the Windows start menu (we're going to use version control to track changes made to the template). Enter the following commands to configure Git, modified to use your name and email address:
+				
+		\begin{lstlisting}[language=bash,showstringspaces=false]
+git config --global user.name "Your Name"
+git config --global user.email your.name@manchester.ac.uk
+		\end{lstlisting}
+		\item In \textbf{Git Bash}, navigate to the folder containing the extracted contents of the zip file using the \texttt{cd} command. Change the path in the example command below as required:
+		
+		\begin{lstlisting}[language=bash,showstringspaces=false]
+cd P:/latex-course
+git init
+git add .
+git commit -m "Initial commit"
+		\end{lstlisting}
+		
+	\end{enumerate}
 
 \section{Customise the University Thesis Document}
 	For the following exercises, recompile the document after you have completed each set of changes.
