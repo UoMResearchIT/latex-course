@@ -108,8 +108,8 @@ git diff HEAD~
 
 \section{Adding a Chapter}
 	\begin{enumerate}
-		\item Create a new document.
-		\item Type \lstinline|\chapter{Methodology}| in the writing pane to define it as the start of a chapter.
+		\item In \textbf{TeXstudio}, create a new file for your chapter and save it as \texttt{mychapter.tex}
+		\item Type \lstinline|\chapter{Methodology}| in the editor window to define it as the start of a chapter.
 		\item Try some different writing commands, using the following examples:
 			\begin{lstlisting}[upquote=true]
 This is going to include some ``quoted text''.				
@@ -118,8 +118,13 @@ but can be accessed by escaping with a backslash, e.g. \%.
 To use italics, try \textit{using this command!}.
 Math mode is contained within dollars, e.g. $\delta$.
 			\end{lstlisting}
-		\item Include this chapter file in the main \texttt{thesis.tex} after the other included \texttt{*.tex} file. If you saved your chapter file as `\texttt{mychapter.tex}', use the command \lstinline|\include{mychapter}|.
+		\item Include your new chapter file in the main \texttt{thesis.tex} file after the other included \texttt{*.tex} files (near the end of the file). Start a new line and use the command \lstinline|\include{mychapter}|.
 		\item Recompile the \texttt{thesis.tex} file.
+		\item In \textbf{Git Bash} enter the following commands to add your new file to the repository:
+		\begin{lstlisting}[language=bash,showstringspaces=false]
+git add mychapter.tex
+git commit -m "Add mychapter"
+		\end{lstlisting}
 	\end{enumerate}
 	
 \section{Referencing}
