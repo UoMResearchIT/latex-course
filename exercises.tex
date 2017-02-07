@@ -143,6 +143,15 @@ git commit -m "Add mychapter"
 		\begin{lstlisting}[language=bash,showstringspaces=false]
 git commit -am "Add paragraph with references"
 		\end{lstlisting}
+		\item Deliberately introduce a compilation error by inserting a dollar sign in the middle of a command and trying to rebuild the \texttt{thesis.tex} document e.g. break one of the reference commands in your new chapter:
+		\begin{lstlisting}
+\cit$ep{Payne2011}
+		\end{lstlisting}
+		Now imagine you hadn't just deliberately introduced an error which is easy to find and fix. There are various approaches to solve this problem. Here is a version control solution to view changes made since the last known working version (your last commit), and then put the modified files back to the last known working version:
+		\begin{lstlisting}[language=bash,showstringspaces=false]
+git diff HEAD		# Displays changes
+git checkout HEAD .	# Restores your previous working state
+		\end{lstlisting}
 	\end{enumerate}
 
 \section{Cross-referencing}
