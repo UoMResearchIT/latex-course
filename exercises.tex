@@ -170,7 +170,7 @@ git commit -am "Add cross-reference to mychapter"
 	
 \section{Adding Figures}
 	\begin{enumerate}
-		\item Use the following code to add a figure:
+		\item Use the following code to add a figure in \texttt{mychapter.tex}:
 			\begin{lstlisting}
 \begin{figure}[htbp]							
 	\centering								
@@ -181,6 +181,12 @@ git commit -am "Add cross-reference to mychapter"
 		\end{lstlisting}
 		\item Try modifying the terms in the square brackets after \lstinline!\includegraphics!; experiment with \lstinline!\pageheight! or \lstinline!keepaspectratio!. Try using multiple terms separated with a comma (\lstinline!,!). 
 		\item Now try the \lstinline!\sidewaysfigure! package. Remember you might need to add it to the preamble!
+		\item Run the following \textbf{Git} commands to commit your changes, and view a history of your project
+			\begin{lstlisting}[language=bash,showstringspaces=false]
+git commit -am "Add figure to mychapter"
+git log
+			\end{lstlisting}
+		With version control it's possible to restore your directory or individual files to the same state as any of the commits shown in your history.
 	\end{enumerate}
 	
 \section{Drawing Tables}
