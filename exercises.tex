@@ -139,16 +139,24 @@ git commit -m "Add mychapter"
 \citep[e.g.][]{Porinchu2003}		
 \citep[][p.245]{Porinchu2003}	
 		\end{lstlisting}
+		\item Commit your changes using the following Git command:
+		\begin{lstlisting}[language=bash,showstringspaces=false]
+git commit -am "Add paragraph with references"
+		\end{lstlisting}
 	\end{enumerate}
 
 \section{Cross-referencing}
 	\begin{enumerate}
-		\item Add a reference label to the chapter, using the command \lstinline|\label{ch:mychapter}|.
-		\item Cross reference the chapter, e.g. 
+		\item Add a reference label to the new chapter, using the command \lstinline|\label{ch:mychapter}|.
+		\item Cross reference the chapter in the \texttt{thesis.tex} file, e.g.
 			\begin{lstlisting}
 As described in chapter \ref{ch:mychapter}, this document is written in \LaTeX.
 			\end{lstlisting}
 		\item Remember you'll need to use a unique name inside the curly braces for each section, chapter, figure etc.
+		\item Commit your changes
+		\begin{lstlisting}[language=bash,showstringspaces=false]
+git commit -am "Add cross-reference to mychapter"
+		\end{lstlisting}
 	\end{enumerate}
 	
 \section{Adding Figures}
