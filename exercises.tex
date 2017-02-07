@@ -1,5 +1,6 @@
 \documentclass[titlepage,colorlinks=true,urlcolor=blue]{article}
 \usepackage[T1]{fontenc}
+\usepackage[scaled=0.85]{beramono}
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{hyperref}
@@ -76,9 +77,9 @@ git commit -m "Initial commit"
 The above commands will create a new Git repository, save a copy of the files, and start tracking any changes you make to them.
 		
 \section{Customise the University Thesis Document}
-	For the following exercises, recompile the document after you have completed each set of changes.
+	For the following exercises, recompile the \texttt{thesis.tex} document after you have completed each set of changes.
 		\begin{enumerate}	
-			\item Find and modify the following lines:
+			\item Open \texttt{thesis.tex} in \textbf{TeXstudio}. Find and modify the following lines, using your details:
 				\begin{lstlisting}
 \begin{document}
 ...
@@ -88,8 +89,21 @@ The above commands will create a new Git repository, save a copy of the files, a
 \school{The Author's school}
 \faculty{The Author's faculty}
 				\end{lstlisting}
-			\item Find and modify the contents of the abstract (located between \lstinline|\beforeabstract| and \lstinline|\afterabstract|).
+			\item In \textbf{Git Bash} enter the following command:
+			\begin{lstlisting}[language=bash,showstringspaces=false]
+git commit -am "Add author details"
+			\end{lstlisting}
+			\item Find and modify the contents of the abstract (the abstract is located between \lstinline|\beforeabstract| and \lstinline|\afterabstract|).
+			\item In \textbf{Git Bash} enter the following command:
+				\begin{lstlisting}[language=bash,showstringspaces=false]
+git commit -am "Add abstract"
+				\end{lstlisting}
 			\item Add some acknowledgments in the section immediately after \lstinline|\prefacesection{Acknowledgements}|.
+			\item In \textbf{Git Bash} enter the following commands. These will save the changes to \texttt{thesis.tex} and display the changes made since the previous commit:
+				\begin{lstlisting}[language=bash,showstringspaces=false]
+git commit -am "Add acknowledgements"
+git diff HEAD~
+				\end{lstlisting}
 		\end{enumerate}
 
 \section{Adding a Chapter}
