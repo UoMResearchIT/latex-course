@@ -13,5 +13,7 @@ Biber is newer and has more advanced features.
 BibTeX can be simpler to set up, especially for teaching where the desktop environment is more controlled than on a typical user's machine.
 
 ## How to build a pdf of the slides and exercises
-Run `PdfLaTeX` on *slides.tex* or *exercises.tex* as appropriate.
-You can use the *Build & View* button in TeXstudio for this purpose.
+1. Click on the green `Clone or download` button.
+   Choose `Download ZIP` or use Git to clone this repository.
+2. Run `PdfLaTeX` on *slides.tex* or *exercises.tex* as appropriate.
+   You can use the *Build & View* button in TeXstudio for this purpose.
