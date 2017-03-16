@@ -23,7 +23,7 @@
 \tikzstyle{every node} = [text=black]
 
 \usepackage{listings}
-\lstset{language=[LaTeX]TeX,breaklines=true,basicstyle=\tt\normalsize,keywordstyle=\color{red},commentstyle=\color{gray}}
+\lstset{language=[LaTeX]TeX,breaklines=true,basicstyle=\tt\normalsize,keywordstyle=\color{red},commentstyle=\color{gray},morekeywords={subsection,subsubsection}}
 
 \title{Introduction to \LaTeX}
 \subtitle{Typesetting your thesis with \LaTeX}
@@ -156,6 +156,20 @@
 		\item Special characters: the following characters have a special meaning in \LaTeX{}: \# \$ \% \^{} \& \_{} \{ \} \~{} \textbackslash
 		\item \href{https://wch.github.io/latexsheet/latexsheet-a4.pdf}{Commands} have this format \verb|\command[optional parameter]{parameter}|
 		\item Text following a \% symbol is ignored by \LaTeX{}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Input files}{Introducing some commands for structural elements}
+	\begin{itemize}
+		\item lists (\texttt{enumerate, itemize, description})
+		\begin{lstlisting}[gobble=16]
+		\begin{enumerate}
+		    \item first item
+		\end{enumerate}
+		\end{lstlisting}
+		\item \lstinline|\section, \subsection, and \subsubsection|
+		\item cross-references e.g. check out equation \ref{eq:integraldemo} \lstinline|\label{sec:intro} \ref{sec:intro}|
+		\item footnotes\footnote{Example footnote} are generated like this \lstinline|\footnote{text}|
 	\end{itemize}
 \end{frame}
 
