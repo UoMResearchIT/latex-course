@@ -6,6 +6,7 @@
 \setbeamercolor{frametitle}{fg=yellow,bg=black!80}
 \setbeamercolor{itemize item}{fg=white}
 \setbeamercolor{itemize subitem}{fg=white}
+\setbeamercolor{enumerate item}{fg=white}
 \setbeamercolor{block title}{fg=white,bg=black}
 \setbeamercolor{section in toc}{fg=white}
 
@@ -171,6 +172,25 @@
 		\item cross-references e.g. check out equation \ref{eq:integraldemo} \lstinline|\label{sec:intro} \ref{sec:intro}|
 		\item footnotes\footnote{Example footnote} are generated like this \lstinline|\footnote{text}|
 	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Input files}{How to typeset mathematical equations}
+	There are two main options:
+	\begin{enumerate}
+		\item Inline math mode, using dollar signs: \lstinline|$e=mc^2$| e.g. $e=mc^2$ describes mass-energy equivalence
+		\item The equation environment (the code below is typeset as equation \ref{eq:integraldemo})
+		\begin{lstlisting}[frame=single,gobble=16]
+		\begin{equation}
+		    y=\int_0^{\infty} f(x)dx
+		    \label{eq:integraldemo}
+		\end{equation}
+		\end{lstlisting}
+		\begin{equation}
+			y=\int_0^{\infty} f(x)dx
+			\label{eq:integraldemo}
+		\end{equation}
+	\end{enumerate}
+	See also Ch. 3 of the \href{https://tobi.oetiker.ch/lshort/lshort.pdf}{not-so-short introduction to \LaTeX{}}
 \end{frame}
 
 \begin{frame}{Output files}{I only wanted a pdf!}
