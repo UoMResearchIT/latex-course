@@ -22,6 +22,9 @@
 \tikzstyle{arrow} = [very thick,->,>=latex]
 \tikzstyle{every node} = [text=black]
 
+\usepackage{listings}
+\lstset{language=[LaTeX]TeX,breaklines=true,basicstyle=\tt\normalsize,keywordstyle=\color{red},commentstyle=\color{gray}}
+
 \title{Introduction to \LaTeX}
 \subtitle{Typesetting your thesis with \LaTeX}
 \author{Dr. Gerard Capes}
@@ -130,14 +133,14 @@
 \begin{frame}[fragile]{Input files}{Structure of a \LaTeX{} document}
 	\begin{itemize}
 		\item The input for \LaTeX{} is a plain text file with a .tex extension e.g. mypaper.tex. Create this using a text editor or your \LaTeX{} IDE (e.g. TeXstudio).
-		\item The file must have the following structure:
-		\begin{verbatim}
+		\item The file \emph{must} have the following structure:
+		\begin{lstlisting}[frame=single,gobble=16]
 		\documentclass[options]{class}
 		<preamble>
 		\begin{document}
 		content...
 		\end{document}
-		\end{verbatim}
+		\end{lstlisting}
 		\item Document classes: article, report, book, letter \ldots
 		\item Preamble lists \textbf{packages} for add-on functionality e.g.
 		\verb|\usepackage{hyperref}|
