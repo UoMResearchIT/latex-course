@@ -193,6 +193,21 @@
 	See also Ch. 3 of the \href{https://tobi.oetiker.ch/lshort/lshort.pdf}{not-so-short introduction to \LaTeX{}}
 \end{frame}
 
+\begin{frame}[fragile]{Numerical citations using Bib\TeX{}}
+	\begin{itemize}
+		\item \LaTeX{} can typeset citations numerically using Bib\TeX{}, without loading any extra packages.
+		\item This requires:
+		\begin{itemize}
+			\item a bib file (e.g. myrefs.bib), containing Bib\TeX{}-formatted references. \href{https://www.sharelatex.com/learn/Bibliography_management_with_bibtex#/The_bibliography_file}{Example}
+			\item a \lstinline|\cite{citationkey}| command in the text, which refers to a specific entry in the bibtex file
+			\item the \lstinline|\bibliography{bibfile}| command, which tells \LaTeX{} the name/location of your bibtex file
+			\item a \lstinline|\bibliographystyle{stylename}| command, which selects one of \href{https://www.sharelatex.com/learn/Bibtex_bibliography_styles}{various bibliographic styles} (abbrv, acm, alpha, apalike, ieeetr, plain, siam, unsrt)
+		\end{itemize}
+		\item Use your reference manager (e.g. Mendeley) to generate a .bib file
+		\item Demo
+	\end{itemize}
+\end{frame}
+
 \begin{frame}{Output files}{I only wanted a pdf!}
 	The software diagram on slide \ref{pic:software} is a simplification. \LaTeX{} outputs a range of files depending on your input file and build profile. These include:
 	\begin{itemize}
