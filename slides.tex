@@ -24,7 +24,7 @@
 \tikzstyle{every node} = [text=black]
 
 \usepackage{listings}
-\lstset{language=[LaTeX]TeX,breaklines=true,basicstyle=\tt\normalsize,keywordstyle=\color{red},commentstyle=\color{gray},morekeywords={subsection,subsubsection}}
+\lstset{language=[LaTeX]TeX,breaklines=true,basicstyle=\tt\normalsize,keywordstyle=\color{red},commentstyle=\color{gray},morekeywords={subsection,subsubsection,citep,citet,setcitestyle}}
 
 \title{Introduction to \LaTeX}
 \subtitle{Typesetting your thesis with \LaTeX}
@@ -205,6 +205,30 @@
 		\end{itemize}
 		\item Use your reference manager (e.g. Mendeley) to generate a .bib file
 		\item Demo
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Author-Year citations}{Using the natbib package}
+	\begin{itemize}
+		\item \LaTeX{} itself is only capable of numerical citations. A popular option for author-year citation styles is the natbib package.
+		\item Natbib can switch between numerical and year-author options, and is part of a standard \LaTeX{} installation.
+		\item Include this in your preamble: \lstinline|\usepackage{natbib}|
+		\item Generate in-text citations using \lstinline|\citet{key}| and citations in parentheses using \lstinline|\citep{key}|
+		\item \lstinline|\bibliography{file}| and \lstinline|\bibliographystyle{style}| are also required
+		\item Some styles included in the natbib package:\\
+		plainnat, abbrvnat, unsrtnat, agu, egu, agms, dcu, kluwer, cospar, nature \ldots
+		\item Demo
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Author-Year citations}{Bibliography styles and alternatives to natbib}
+	\begin{itemize}
+		\item Setting the bibliography style automatically sets the citation style to match
+		\item Override citation defaults using \lstinline|\setcitestyle{}| in the preamble (see documentation for details)
+		\item Many academic journals insist on natbib, and hence a large number of suitable bibliography style files (\textbf{.bst} files) already exist
+		\item \textbf{.bst} files are often available from the journal if they're not already present in your installation
+		\item If required, you can define your own style using `latex makebst` on the command line
+		\item \href{http://tex.stackexchange.com/questions/25701/bibtex-vs-biber-and-biblatex-vs-natbib/25702}{Alternatives to natbib} include the biblatex package, and the biber	program
 	\end{itemize}
 \end{frame}
 
