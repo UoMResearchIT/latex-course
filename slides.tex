@@ -24,7 +24,7 @@
 \tikzstyle{every node} = [text=black]
 
 \usepackage{listings}
-\lstset{language=[LaTeX]TeX,breaklines=true,basicstyle=\tt\normalsize,keywordstyle=\color{red},commentstyle=\color{gray},morekeywords={subsection,subsubsection,citep,citet,setcitestyle}}
+\lstset{language=[LaTeX]TeX,breaklines=true,basicstyle=\tt\normalsize,keywordstyle=\color{red},commentstyle=\color{gray},morekeywords={subsection,subsubsection,citep,citet,setcitestyle,includepdf}}
 
 \title{Introduction to \LaTeX}
 \subtitle{Typesetting your thesis with \LaTeX}
@@ -108,7 +108,7 @@
 \begin{frame}[fragile] \frametitle{Some terminology}
 	\begin{itemize}
 		\item \TeX{} is the typesetting language/program. It is focussed on formatting.
-		\item \LaTeX{} is focussed on content, and includes macros (e.g. \verb|\section, \documentclass, \label|) to make using \TeX{} easier.\\
+		\item \LaTeX{} is focussed on content, and includes macros (e.g. \lstinline|\section{}, \documentclass{}, \label{}|) to make using \TeX{} easier.\\
 		\LaTeX{} $\approx$ \TeX{} + macros. Further reading \href{https://www.texpad.com/support/latex/advanced/tex-vs-latex}{here} and  \href{http://www.tex.ac.uk/faq/FAQ-texthings.html}{here}.
 		\item Mik\TeX, Mac\TeX{} and \TeX{}Live are \TeX{} \textit{distributions} (i.e. \LaTeX{} executables and a collection of packages)
 	\end{itemize}
@@ -144,7 +144,7 @@
 		\end{lstlisting}
 		\item Document classes: article, report, book, letter \ldots
 		\item Preamble lists \textbf{packages} for add-on functionality e.g.
-		\verb|\usepackage{hyperref}|
+		\lstinline|\usepackage{hyperref}|
 	\end{itemize}
 \end{frame}
 
@@ -339,7 +339,7 @@
 
 \begin{frame}[fragile]{Alternative format thesis}{A collection of papers}
 	\begin{itemize}
-		\item If you are submitting an alternative format thesis (including a collection of published papers) this is easily achieved using the \verb|\includepdf{}| command
+		\item If you are submitting an alternative format thesis (including a collection of published papers) this is easily achieved using the \lstinline|\includepdf{}| command
 		\item The required package \texttt{pdfpages} is already in the preamble of the template
 	\end{itemize}	
 \end{frame}
