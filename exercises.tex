@@ -23,23 +23,23 @@
 		\item You may need to configure the application on first run; accept the defaults. This uses the MiKTeX \LaTeX \ distribution that has already been installed.
 		\item Navigate the menus to \texttt{Options >  Configure TeXstudio > Build} and check that the default compiler is \texttt{PdfLaTeX}
 		\item Ensure that line numbers are visible in the editor window. If they are not, enable them using:
-		
+
 		\texttt{Options > Configure TeXstudio\ldots{} > Show advanced options (bottom left checkbox) > Adv. Editor > Appearance > Show line numbers}
 	\end{enumerate}
 
 \section{Hello World!}
 	\begin{enumerate}
 		\item Create a new document.
-		\item In the writing pane, \emph{type} the following lines: 		
+		\item In the writing pane, \emph{type} the following lines:
 			\begin{lstlisting}[gobble=16]
 				\documentclass{article}
 				\begin{document}
 					Hello World
 				\end{document}
-			\end{lstlisting}	
+			\end{lstlisting}
 		\item Save the file.
 		\item Click on the \texttt{build and view} button.
-	\end{enumerate}	
+	\end{enumerate}
 
 \section{My first latex document}
 	\begin{enumerate}
@@ -81,10 +81,10 @@
 		\end{lstlisting}
 	\end{enumerate}
 The above commands will create a new Git repository, save a copy of the files, and start tracking any changes you make to them.
-		
+
 \section{Customise the University Thesis Document}
 	For the following exercises, recompile the \texttt{thesis.tex} document after you have completed each set of changes.
-		\begin{enumerate}	
+		\begin{enumerate}
 			\item Open \texttt{thesis.tex} in \textbf{TeXstudio}. Find and modify the following lines, using your details:
 				\begin{lstlisting}[gobble=20]
 					\begin{document}
@@ -132,7 +132,7 @@ The above commands will create a new Git repository, save a copy of the files, a
 			git commit -m "Add mychapter"
 		\end{lstlisting}
 	\end{enumerate}
-	
+
 \section{Referencing}
 	\begin{enumerate}
 		\item Open the thesis document and ensure the \lstinline|\bibliography{}| command points to the bibliography database (the \texttt{library.bib} file). The \texttt{.bib} file extension is not needed.
@@ -173,7 +173,7 @@ The above commands will create a new Git repository, save a copy of the files, a
 			git commit -am "Add cross-reference to mychapter"
 		\end{lstlisting}
 	\end{enumerate}
-	
+
 \section{Adding Figures}
 	\begin{enumerate}
 		\item Use the following code to add a figure in \texttt{mychapter.tex}:
@@ -185,7 +185,7 @@ The above commands will create a new Git repository, save a copy of the files, a
 					\label{labeltexthere}
 				\end{figure}
 		\end{lstlisting}
-		\item Try modifying the terms in the square brackets after \lstinline!\includegraphics!; experiment with \lstinline!\pageheight! or \lstinline!keepaspectratio!. Try using multiple terms separated with a comma (\lstinline!,!). 
+		\item Try modifying the terms in the square brackets after \lstinline!\includegraphics!; experiment with \lstinline!\pageheight! or \lstinline!keepaspectratio!. Try using multiple terms separated with a comma (\lstinline!,!).
 		\item Now try the \lstinline!sidewaysfigure! environment. This uses the \texttt{rotating} package, so check whether you already have it in the preamble!
 		\item Run the following \textbf{Git} commands to commit your changes, and view a history of your project
 			\begin{lstlisting}[language=bash,showstringspaces=false,gobble=16]
