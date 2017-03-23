@@ -4,10 +4,10 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{hyperref}
-\usepackage{listings}
 \usepackage{fullpage}
 \usepackage[type={CC},modifier={by-sa},version={4.0}]{doclicense}
-\lstset{language=[LaTeX]TeX,breaklines=true,basicstyle=\tt\normalsize,keywordstyle=\color{blue},commentstyle=\color{gray}}
+\usepackage{listings}
+\lstset{language=[LaTeX]TeX,breaklines=true,basicstyle=\tt\normalsize,keywordstyle=\color{blue},commentstyle=\color{gray},tabsize=4}
 
 \title{Introduction to \LaTeX{} --- Exercises}
 \author{Dr Gerard Capes}
@@ -31,11 +31,11 @@
 	\begin{enumerate}
 		\item Create a new document.
 		\item In the writing pane, \emph{type} the following lines: 		
-			\begin{lstlisting}
-\documentclass{article}	
-\begin{document}				
-	Hello World							
-\end{document}					
+			\begin{lstlisting}[gobble=16]
+				\documentclass{article}
+				\begin{document}
+					Hello World
+				\end{document}
 			\end{lstlisting}	
 		\item Save the file.
 		\item Click on the \texttt{build and view} button.
@@ -61,17 +61,17 @@
 		\item Find the downloaded zip file in Windows explorer, then \texttt{right click > extract all}. A good choice of location to extract the zip archive to would be your P drive.
 		\item Open \textbf{Git Bash} from the Windows start menu. Enter the following commands to configure Git, modified to use your name and email address:
 
-		\begin{lstlisting}[language=bash,showstringspaces=false]
-git config --global user.name "Your Name"
-git config --global user.email your.name@manchester.ac.uk
+		\begin{lstlisting}[language=bash,showstringspaces=false,gobble=12]
+			git config --global user.name "Your Name"
+			git config --global user.email your.name@manchester.ac.uk
 		\end{lstlisting}
 		\item In \textbf{Git Bash}, navigate to the folder containing the extracted contents of the zip file using the \texttt{cd} command. Change the path in the example command below as required:
 
-		\begin{lstlisting}[language=bash,showstringspaces=false]
-cd P:/latex-course
-git init
-git add .
-git commit -m "Initial commit"
+		\begin{lstlisting}[language=bash,showstringspaces=false,gobble=12]
+			cd P:/latex-course
+			git init
+			git add .
+			git commit -m "Initial commit"
 		\end{lstlisting}
 	\end{enumerate}
 The above commands will create a new Git repository, save a copy of the files, and start tracking any changes you make to them.
@@ -80,29 +80,29 @@ The above commands will create a new Git repository, save a copy of the files, a
 	For the following exercises, recompile the \texttt{thesis.tex} document after you have completed each set of changes.
 		\begin{enumerate}	
 			\item Open \texttt{thesis.tex} in \textbf{TeXstudio}. Find and modify the following lines, using your details:
-				\begin{lstlisting}
-\begin{document}
-...
-\title{The University Thesis File}
-\author{The Author's name}
-% Faculty of Life Sciences people should comment the next line out
-\school{The Author's school}
-\faculty{The Author's faculty}
+				\begin{lstlisting}[gobble=20]
+					\begin{document}
+					...
+					\title{The University Thesis File}
+					\author{The Author's name}
+					% Faculty of Life Sciences people should comment the next line out
+					\school{The Author's school}
+					\faculty{The Author's faculty}
 				\end{lstlisting}
 			\item In \textbf{Git Bash} enter the following command:
-			\begin{lstlisting}[language=bash,showstringspaces=false]
-git commit -am "Add author details"
+			\begin{lstlisting}[language=bash,showstringspaces=false,gobble=16]
+				git commit -am "Add author details"
 			\end{lstlisting}
 			\item Find and modify the contents of the abstract (the abstract is located between \lstinline|\beforeabstract| and \lstinline|\afterabstract|).
 			\item In \textbf{Git Bash} enter the following command:
-				\begin{lstlisting}[language=bash,showstringspaces=false]
-git commit -am "Add abstract"
+				\begin{lstlisting}[language=bash,showstringspaces=false,gobble=20]
+					git commit -am "Add abstract"
 				\end{lstlisting}
 			\item Add some acknowledgments in the section immediately after \lstinline|\prefacesection{Acknowledgements}|.
 			\item In \textbf{Git Bash} enter the following commands. These will save the changes to \texttt{thesis.tex} and display the changes made since the previous commit:
-				\begin{lstlisting}[language=bash,showstringspaces=false]
-git commit -am "Add acknowledgements"
-git diff HEAD~
+				\begin{lstlisting}[language=bash,showstringspaces=false,gobble=20]
+					git commit -am "Add acknowledgements"
+					git diff HEAD~
 				\end{lstlisting}
 		\end{enumerate}
 
@@ -111,19 +111,19 @@ git diff HEAD~
 		\item In \textbf{TeXstudio}, create a new file for your chapter and save it as \texttt{mychapter.tex}
 		\item Type \lstinline|\chapter{Methodology}| in the editor window to define it as the start of a chapter.
 		\item Try some different writing commands, using the following examples:
-			\begin{lstlisting}[upquote=true]
-This is going to include some ``quoted text''.				
-Some characters are reserved (i.e. they have a special purpose)
-but can be accessed by escaping with a backslash, e.g. \%.
-To use italics, try \textit{using this command!}.
-Math mode is contained within dollars, e.g. $\delta$.
+			\begin{lstlisting}[upquote=true,gobble=16]
+				This is going to include some ``quoted text''.
+				Some characters are reserved (i.e. they have a special purpose)
+				but can be accessed by escaping with a backslash, e.g. \%.
+				To use italics, try \textit{using this command!}.
+				Math mode is contained within dollars, e.g. $\delta$.
 			\end{lstlisting}
 		\item Include your new chapter file in the main \texttt{thesis.tex} file after the other included \texttt{*.tex} files (near the end of the file). Start a new line and use the command \lstinline|\include{mychapter}|.
 		\item Recompile the \texttt{thesis.tex} file.
 		\item In \textbf{Git Bash} enter the following commands to add your new file to the repository:
-		\begin{lstlisting}[language=bash,showstringspaces=false]
-git add mychapter.tex
-git commit -m "Add mychapter"
+		\begin{lstlisting}[language=bash,showstringspaces=false,gobble=12]
+			git add mychapter.tex
+			git commit -m "Add mychapter"
 		\end{lstlisting}
 	\end{enumerate}
 	
@@ -131,26 +131,26 @@ git commit -m "Add mychapter"
 	\begin{enumerate}
 		\item Open the thesis document and ensure the \lstinline|\bibliography{}| command points to the bibliography database (the \texttt{library.bib} file). The \texttt{.bib} file extension is not needed.
 		\item Open your new chapter file, start a new paragraph (insert a blank line) and include some referencing commands in the text using references from the bibliography file. Some examples are given below:
-		\begin{lstlisting}
-\citep{Payne2011}		
-\citealp{Porinchu2003,Payne2011}	
-\citet{Payne2011}			
-\citealt{Payne2011}			
-\citep[e.g.][]{Porinchu2003}		
-\citep[][p.245]{Porinchu2003}	
+		\begin{lstlisting}[gobble=12]
+			\citep{Payne2011}
+			\citealp{Porinchu2003,Payne2011}
+			\citet{Payne2011}
+			\citealt{Payne2011}
+			\citep[e.g.][]{Porinchu2003}
+			\citep[][p.245]{Porinchu2003}
 		\end{lstlisting}
 		\item Commit your changes using the following Git command:
-		\begin{lstlisting}[language=bash,showstringspaces=false]
-git commit -am "Add paragraph with references"
+		\begin{lstlisting}[language=bash,showstringspaces=false,gobble=12]
+			git commit -am "Add paragraph with references"
 		\end{lstlisting}
 		\item Deliberately introduce a compilation error by inserting a dollar sign in the middle of a command and trying to rebuild the \texttt{thesis.tex} document e.g. break one of the reference commands in your new chapter:
-		\begin{lstlisting}
-\cit$ep{Payne2011}
+		\begin{lstlisting}[gobble=12]
+			\cit$ep{Payne2011}
 		\end{lstlisting}
 		Now imagine you hadn't just deliberately introduced an error which is easy to find and fix. There are various approaches to solve this problem. Here is a version control solution to view changes made since the last known working version (your last commit), and then put the modified files back to the last known working version:
-		\begin{lstlisting}[language=bash,showstringspaces=false]
-git diff HEAD		# Displays changes
-git checkout HEAD .	# Restores your previous working state
+		\begin{lstlisting}[language=bash,showstringspaces=false,gobble=12]
+			git diff HEAD		# Displays changes
+			git checkout HEAD .	# Restores your previous working state
 		\end{lstlisting}
 	\end{enumerate}
 
@@ -158,88 +158,88 @@ git checkout HEAD .	# Restores your previous working state
 	\begin{enumerate}
 		\item Add a reference label to the new chapter, using the command \lstinline|\label{ch:mychapter}|.
 		\item Cross reference the chapter in the \texttt{thesis.tex} file, e.g.
-			\begin{lstlisting}
-As described in chapter \ref{ch:mychapter}, this document is written in \LaTeX.
+			\begin{lstlisting}[gobble=16]
+				As described in chapter \ref{ch:mychapter}, this document is written in \LaTeX.
 			\end{lstlisting}
 		\item Remember you'll need to use a unique name inside the curly braces for each section, chapter, figure etc.
 		\item Commit your changes
-		\begin{lstlisting}[language=bash,showstringspaces=false]
-git commit -am "Add cross-reference to mychapter"
+		\begin{lstlisting}[language=bash,showstringspaces=false,gobble=12]
+			git commit -am "Add cross-reference to mychapter"
 		\end{lstlisting}
 	\end{enumerate}
 	
 \section{Adding Figures}
 	\begin{enumerate}
 		\item Use the following code to add a figure in \texttt{mychapter.tex}:
-			\begin{lstlisting}
-\begin{figure}[htbp]							
-	\centering								
-		\includegraphics[width=1\textwidth]{example-image-a}
-	\caption[Short caption]{Long caption}			
-	\label{labeltexthere}						
-\end{figure}
+			\begin{lstlisting}[gobble=16]
+				\begin{figure}[htbp]
+					\centering
+						\includegraphics[width=1\textwidth]{example-image-a}
+					\caption[Short caption]{Long caption}
+					\label{labeltexthere}
+				\end{figure}
 		\end{lstlisting}
 		\item Try modifying the terms in the square brackets after \lstinline!\includegraphics!; experiment with \lstinline!\pageheight! or \lstinline!keepaspectratio!. Try using multiple terms separated with a comma (\lstinline!,!). 
 		\item Now try the \lstinline!sidewaysfigure! environment. This uses the \texttt{rotating} package, so check whether you already have it in the preamble!
 		\item Run the following \textbf{Git} commands to commit your changes, and view a history of your project
-			\begin{lstlisting}[language=bash,showstringspaces=false]
-git commit -am "Add figure to mychapter"
-git log
+			\begin{lstlisting}[language=bash,showstringspaces=false,gobble=16]
+				git commit -am "Add figure to mychapter"
+				git log
 			\end{lstlisting}
 		With version control it's possible to restore your directory or individual files to the same state as any of the commits shown in your history.
 	\end{enumerate}
-	
+
 \section{Drawing Tables}
 	\begin{enumerate}
 		\item Create a table using the following lines of code:
-			\begin{lstlisting}
-\begin{table}[htbp]						
-	\centering							
-	\begin{tabular}{lcc}					
-		\toprule						
-			Name    & Age & Gender \\ \midrule	
-			Tom     & 26  & Male   \\			
-			James   & 22  & Male   \\			
-			Eleanor & 25  & Female \\			
-		\bottomrule					
-	\end{tabular}						
-	\caption[Short caption]{Long caption}		
-	\label{}							
-\end{table}
+			\begin{lstlisting}[gobble=16]
+				\begin{table}[htbp]
+					\centering
+					\begin{tabular}{lcc}
+						\toprule
+							Name    & Age & Gender \\ \midrule
+							Tom     & 26  & Male   \\
+							James   & 22  & Male   \\
+							Eleanor & 25  & Female \\
+						\bottomrule
+					\end{tabular}
+					\caption[Short caption]{Long caption}
+					\label{}
+				\end{table}
 			\end{lstlisting}
 		\item Try adding a column for attendance by adding \lstinline!c! to the \lstinline!\begin{tabular}{lcc}! and some data to each row.
 		\item Remember cells are separated with an ampersand (\lstinline!&!), so you'll need to add this to each row.
 		\item Consider commiting your changes to your \textbf{Git} repository (and for the remaining exercises).
 	\end{enumerate}
-	
+
 \section{Writing Equations}
 	\begin{enumerate}
 		\item Create an equation using the following code as an example:
-			\begin{lstlisting}
-\begin{equation}			
-	e=mc^{2}			
-\label{massenergyequiv}	
-\end{equation}
+			\begin{lstlisting}[gobble=16]
+				\begin{equation}
+					e=mc^{2}
+				\label{massenergyequiv}
+				\end{equation}
 			\end{lstlisting}
 		\item Reference the equation in the text using \lstinline!\ref{massenergyequiv}!.
 	\end{enumerate}
 
 \section{Inserting a quote}
-	Try inserting a quote using the \lstinline!\quote! environment:
-		\begin{lstlisting}
-\begin{quote}
-I think therefore I use \LaTeX for typesetting. 
-\end{quote}
+	Try inserting a quote using the \lstinline!quote! environment:
+		\begin{lstlisting}[gobble=12]
+			\begin{quote}
+				I think therefore I use \LaTeX{} for typesetting.
+			\end{quote}
 		\end{lstlisting}
 
 \section{Escaped \& Special Characters}
 	Try using reserved characters like \&, \textbackslash, and \%, and you'll run into difficulty. Try writing the following:
-		\begin{lstlisting}
-If you need to write an ampersand (\&), use the slash to escape
-or it will not render.
-Similarly, if you wanted to use a slash or backslash (\backslash),
-you must use a command.
-If you need accents, they are often produced l\'ike this.
+		\begin{lstlisting}[gobble=12]
+			If you need to write an ampersand (\&), use the slash to escape
+			or it will not render.
+			Similarly, if you wanted to use a slash or backslash (\backslash),
+			you must use a command.
+			If you need accents, they are often produced l\'ike this.
 		\end{lstlisting}
 
 \begin{figure}[b]
