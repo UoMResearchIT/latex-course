@@ -8,6 +8,7 @@
 
 \documentclass[12pt]{article}  % YOUR INPUT FILE MUST CONTAIN THESE
 \usepackage{graphicx}	% Required for figure environment
+\usepackage{natbib}
 
 \begin{document}                  % TWO LINES PLUS THE \end COMMAND AT
                                   % THE END
@@ -53,6 +54,11 @@ There are various environments for listing things in \LaTeX{}:
 	\item description (creates a list using descriptions instead of bullets or numbers)
 \end{itemize}
 
+\section{Science!}
+The relation $e=mc^2$ describes the equivalence between mass and energy \citep{massenergy}.
+
+
+\section{Weather}
 % Include an image file in a figure
 \begin{figure}[h]
 	\centering
@@ -62,5 +68,8 @@ There are various environments for listing things in \LaTeX{}:
 \end{figure}
 
 Typical British weather is depicted in figure \ref{fig:weather}.
+
+\bibliography{physics}
+\bibliographystyle{agu}
 
 \end{document}                    % THE INPUT FILE ENDS LIKE THIS
