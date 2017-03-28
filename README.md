@@ -5,7 +5,7 @@ They were transcribed and adapted from Tom Bishop's course at the University of 
 
 The .tex file are usually compiled using pdfLaTeX; the only auxiliary file required is the University of Manchester logo, of which a copy is included in this repository. 
 
-All of the materials here (excluded the University of Manchester logo) are licenced under [CC-BY-SA v4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+All of the materials here (excluding the University of Manchester logo) are licenced under [CC-BY-SA v4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 
 ## BibTeX branch
 This branch uses BibTeX for referencing, while the biber branch uses Biber.
