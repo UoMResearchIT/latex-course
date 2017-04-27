@@ -17,3 +17,6 @@ BibTeX can be simpler to set up, especially for teaching where the desktop envir
    Choose `Download ZIP` or use Git to clone this repository.
 2. Run `PdfLaTeX` on *slides.tex* or *exercises.tex* as appropriate.
    You can use the *Build & View* button in TeXstudio for this purpose.
+
+## Introductory slideshow
+The [introductory slideshow](https://slides.com/gcapes/latex/) contains links relating to Research IT, and the course feedback form.
