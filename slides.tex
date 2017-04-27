@@ -24,7 +24,7 @@
 \tikzstyle{every node} = [text=black]
 
 \usepackage{listings}
-\lstset{language=[LaTeX]TeX,breaklines=true,basicstyle=\tt\normalsize,keywordstyle=\color{red},commentstyle=\color{gray},morekeywords={subsection,subsubsection,citep,citet,setcitestyle,includepdf}}
+\lstset{language=[LaTeX]TeX,breaklines=true,basicstyle=\tt\normalsize,keywordstyle=\color{red},commentstyle=\color{gray},morekeywords={subsection,subsubsection,citep,citet,setcitestyle,includepdf,includegraphics}}
 
 \title{Introduction to \LaTeX}
 \subtitle{Typesetting your thesis with \LaTeX}
@@ -274,10 +274,11 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Floats}
+\begin{frame}[fragile]{Floats}
 	\begin{itemize}
 		\item A \textit{float} is a container for something that cannot be broken over a page e.g. figures and tables
-		\item To create a figure, use the \texttt{figure} environment
+		\item To create a figure, use the \texttt{figure} environment.
+		\item To display images, use the \lstinline|\includegraphics{file}| command from the \texttt{graphicx} package
 		\item Generally \LaTeX{} does a good job of positioning floats, but you can pass specifiers to exercise more control over the placement of figures
 		\item \href{https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}{Figure examples and more placement options}
 		\item \href{http://www.tex.ac.uk/FAQ-figurehere.html}{How to put a float exactly where you want it}
