@@ -125,7 +125,8 @@ The above commands will create a new Git repository, save a copy of the files, a
 	\begin{enumerate}
 		\item In \textbf{TeXstudio}, create a new file for your chapter and save it as \texttt{mychapter.tex}
 		\item Type \lstinline|\chapter{Methodology}| in the editor window to define it as the start of a chapter.
-		\item Try some different writing commands, using the following examples:
+		\item Include your new chapter file in the main \texttt{thesis.tex} file after the other included \texttt{*.tex} files (near the end of the file). Start a new line and use the command \lstinline|\include{mychapter}|. This will include the file \texttt{mychapter.tex}.
+		\item In your new chapter file, try some different writing commands, using the following examples:
 			\begin{lstlisting}[upquote=true,gobble=16]
 				This is going to include some ``quoted text''.
 				Some characters are reserved (i.e. they have a special purpose)
@@ -133,8 +134,7 @@ The above commands will create a new Git repository, save a copy of the files, a
 				To use italics, try \textit{using this command!}.
 				Math mode is contained within dollars, e.g. $\delta$.
 			\end{lstlisting}
-		\item Include your new chapter file in the main \texttt{thesis.tex} file after the other included \texttt{*.tex} files (near the end of the file). Start a new line and use the command \lstinline|\include{mychapter}|.
-		\item Recompile the \texttt{thesis.tex} file.
+		\item Save the changes to your chapter file, then recompile the \texttt{thesis.tex} file.
 		\item In \textbf{Git Bash} enter the following commands to add your new file to the repository:
 		\begin{lstlisting}[language=bash,showstringspaces=false,gobble=12]
 			git add mychapter.tex

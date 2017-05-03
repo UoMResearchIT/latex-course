@@ -341,7 +341,7 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame} \frametitle{The University Thesis Document Files}
+\begin{frame}{The University Thesis Document Files}
 	\begin{block}{Style Sheet}
 		Tells \LaTeX{} how to compose the document.
 	\end{block}
@@ -350,7 +350,7 @@
 	\end{block}
 \end{frame}
 
-\begin{frame} \frametitle{How do Files Link?}
+\begin{frame}[fragile] \frametitle{How do Files Link?}
 \begin{center}
 		\begin{tikzpicture}[node distance=0.15\paperwidth]
 			\node (pro1)  [process] 	{Thesis File};
@@ -364,6 +364,8 @@
 			\draw (pro1) -- (pro5);
 		\end{tikzpicture}
 	\end{center}
+	Thesis.tex is the document you compile.\\
+	The chapters are not complete \LaTeX{} documents; during compilation, the contents of each chapter file are inserted into the main thesis.tex file using the \lstinline|\include{file}| command.
 \end{frame}
 
 \begin{frame}{Generating a Bib\TeX{} database}
