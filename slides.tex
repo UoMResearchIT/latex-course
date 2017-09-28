@@ -136,7 +136,7 @@
 
 \begin{frame}[fragile]{Input files}{Structure of a \LaTeX{} document}
 	\begin{itemize}
-		\item The input for \LaTeX{} is a plain text file with a .tex extension e.g. mypaper.tex. Create this using a text editor or your \LaTeX{} IDE (e.g. TeXstudio).
+		\item The input for \LaTeX{} is a plain text file with a \textbf{.tex} extension e.g. mypaper.tex. Create this using a text editor or your \LaTeX{} IDE (e.g. TeXstudio).
 		\item The file \emph{must} have the following structure:
 		\begin{lstlisting}[frame=single,gobble=16]
 		\documentclass[options]{class}
@@ -268,13 +268,13 @@
 		\item \textbf{.aux} - contains information required for cross-referencing
 		\item \textbf{.bbl} - bibliography info created by Bib\TeX{} - subsequently inserted by \LaTeX{} into the document
 		\item \textbf{.blg} - Bib\TeX{} log file
-		\item \textbf{.synctex.gz} - contains information for jumping between source code and output file
+		\item \textbf{.synctex.gz} - contains information for jumping between source code and output file in your IDE (demo)
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Output files}{Implications for compiling your document}
 	\begin{itemize}
-		\item If your .tex file contains cross-references and citations, it will need to be processed several times to resolve the dependencies between the intermediate files. The typical sequence is: \href{http://www.tex.ac.uk/FAQ-usebibtex.html}{\LaTeX~Bib\TeX~\LaTeX~\LaTeX}.
+		\item If your \textbf{.tex} file contains cross-references and citations, it will need to be processed several times to resolve the dependencies between the intermediate files. The typical sequence is: \href{http://www.tex.ac.uk/FAQ-usebibtex.html}{\LaTeX~Bib\TeX~\LaTeX~\LaTeX}.
 		\item If (some of) your citations show up as question marks, it is worth checking the above
 		\item Most IDEs can be set up to perform the above sequence at the click of a button (e.g. \textbf{build} in \TeX studio), as well as offering access to commands individually
 	\end{itemize}
