@@ -5,7 +5,7 @@ Options > Configure TeXstudio
 Editor > Font Size
 
 ### Font size for menus and buttons
-General > Font Size
+General > Appearance > Font Size
 
 ### Button size
 Show Advanced Options > GUI Scaling
