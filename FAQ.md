@@ -3,3 +3,11 @@ The default behaviour in LaTeX is not to indent the first paragraph in a section
 
 However if you want to indent the first paragraph to match all the others, put this in your preamble:
 `\usepackage{indentfirst}`
+
+## In two-column mode, how can I make a figure span two columns?
+Use the starred version of the figure environment
+```latex
+\begin{figure*} 
+...
+\end{figure*}
+```
