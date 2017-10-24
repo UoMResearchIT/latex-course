@@ -68,7 +68,11 @@ If you get stuck, talk to the person next to you, ask the instructor, or look at
 For this exercise, continue to modify the \texttt{first\_latex\_example.tex} file.
 	\begin{enumerate}
 		\item Use the natbib package in combination with the physics.bib file to cite Einstein's mass-energy equivalence paper, which contains the equation $e=mc^2$. Use the `agu' bibliography style. Refer back to the slides for guidance on which commands to use, and where to use them.
-		\item Use an equation environment to typeset the Schr\"{o}dinger equation: $$i\hbar \frac{\partial{}} {\partial{t}} \Psi(r,t) = \left[\frac{-\hbar^2}{2 \mu} \nabla ^2 + V(r,t)\right] \Psi(r,t)$$
+		\item Use an equation environment to typeset the Schr\"{o}dinger equation:
+		\begin{equation}
+			i\hbar \frac{\partial{}} {\partial{t}} \Psi(r,t) = \left[\frac{-\hbar^2}{2 \mu} \nabla ^2 + V(r,t)\right] \Psi(r,t)
+		\end{equation}
+		
 		Search online for how to typeset the various characters, and feel free to experiment typesetting your own equations. Give the equation a label in order to refer back to it, then cite Schr\"{o}dinger's 1926 paper when you refer to this equation in the text - the citation is already in the physics.bib file.
 		
 		If you get stuck, look at the source file \texttt{exercises.tex} and identify which command typesets which part of the equation.
