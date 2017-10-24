@@ -214,16 +214,22 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{Author-Year citations}{Using the natbib package}
+\begin{frame}[fragile]{Author-Year citations}{Using the natbib package and Bib\TeX{} program}
 	\begin{itemize}
-		\item \LaTeX{} itself is only capable of numerical citations. A popular option for author-year citation styles is the natbib package.
-		\item Natbib can switch between numerical and year-author options, and is part of a standard \LaTeX{} installation.
-		\item Include this in your preamble: \lstinline|\usepackage{natbib}|
-		\item Generate in-text citations using \lstinline|\citet{key}| and citations in parentheses using \lstinline|\citep{key}|
-		\item \lstinline|\bibliography{file}| and \lstinline|\bibliographystyle{style}| are also required
-		\item Some styles included in the natbib package:\\
-		plainnat, abbrvnat, unsrtnat, agu, egu, agms, dcu, kluwer, cospar, nature \ldots
-		\item Demo
+		\item \LaTeX{} itself is only capable of numerical citations, with very limited formatting styles.
+		\item Natbib is a popular package capable of both numerical and author-year citations, and many formatting styles are available.
+		\item Recipe:
+		\begin{itemize}
+			\item A \textbf{\href{physics.bib}{.bib}} file containing Bib\TeX{}-formatted references ---
+			generate using e.g. \href{https://www.mendeley.com/}{Mendeley}
+			\item \lstinline|\usepackage{natbib}| in your preamble
+			\item \lstinline|\bibliography{<file>}| makes your bibliography.
+			Note that the \textbf{.bib} file extension is not required.
+			\item Set the style using \lstinline|\bibliographystyle{<style>}|
+			Styles include: agu, dcu, plainnat
+		\end{itemize}
+		\item Generate in-text citations using \lstinline|\citet{<key>}| and citations in parentheses using \lstinline|\citep{<key>}|
+			\item Demo
 	\end{itemize}
 \end{frame}
 
