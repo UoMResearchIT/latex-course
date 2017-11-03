@@ -13,3 +13,5 @@ Use the starred version of the figure environment
 ...
 \end{figure*}
 ```
+## Is there a UoM-styled beamer theme?
+There is an unofficial theme [here](https://github.com/mundya/unofficial-university-of-manchester-beamer).
