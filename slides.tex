@@ -144,6 +144,7 @@
 \end{frame}
 
 \begin{frame}[fragile]{Input files}{Structure of a \LaTeX{} document}
+	\hypertarget{sl:structure}{}
 	\begin{itemize}
 		\item The input for \LaTeX{} is a plain text file with a \textbf{.tex} extension e.g. mypaper.tex. Create this using a text editor or your \LaTeX{} IDE (e.g. TeXstudio).
 		\item The file \emph{must} have the following structure:
@@ -158,7 +159,6 @@
 		\item Preamble lists \textbf{packages} for add-on functionality e.g.
 		\lstinline|\usepackage{hyperref}|
 	\end{itemize}
-	\label{sl:structure}
 \end{frame}
 
 \begin{frame}{Exercise 1 and 2}
@@ -289,7 +289,7 @@
 	\begin{itemize}
 		\item A \textit{float} is a container for something that cannot be broken over a page e.g. figures and tables
 		\item To create a figure, use the \texttt{figure} environment.
-		\item To display images, use the \lstinline|\includegraphics{file}| command from the \texttt{graphicx} package, which needs to be in your \hyperref[sl:structure]{preamble}
+		\item To display images, use the \lstinline|\includegraphics{file}| command from the \texttt{graphicx} package, which needs to be in your \hyperlink{sl:structure}{preamble}
 		\item Generally \LaTeX{} does a good job of positioning floats, but you can pass specifiers to exercise more control over the placement of figures
 		\item \href{https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}{Figure examples and more placement options}
 		\item \href{http://www.tex.ac.uk/FAQ-figurehere.html}{How to put a float exactly where you want it}
