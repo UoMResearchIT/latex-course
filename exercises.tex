@@ -85,27 +85,39 @@ For this exercise, continue to modify the \texttt{first\_latex\_example.tex} fil
 		\item Add a label to your figure and use it to cross-reference (refer back to) the figure in the text. Use the example on \href{https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing}{this page} as a guide.
 	\end{enumerate}
 
+\pagebreak
+
 \section{Download the University Thesis Document}
 	The following exercises use version control to track changes to your files. The aim is to demonstrate some of the benefits of using version control, and if you are interested in learning more you can apply to our \href{https://app.manchester.ac.uk/rgit}{version control course}. For now, just type the commands, or feel free to ignore the steps which use version control and focus on learning \LaTeX.
 	\begin{enumerate}
 		\item A zip file containing the current version of the University Thesis Document can be downloaded from the Github repository, \url{https://github.com/gcapes/latex-thesis-template}, using the \texttt{Clone or download} button. Ensure you have the correct branch selected --- this version of the course requires the \texttt{bibtex} branch to be selected.
 		\item Find the downloaded zip file in Windows explorer, then \texttt{right click > extract all}. A good choice of location to extract the zip archive to would be your P drive.
-		\item Open \textbf{Git Bash} from the Windows start menu. Enter the following commands to configure Git, modified to use your name and email address:
+		\item Use Windows explorer to navigate to the directory you just downloaded and extracted i.e. the directory which contains \texttt{thesis.tex}.
+		
+		Use the context menu (mouse right click) to open \textbf{Git Bash here}.
+		
+		You should see the prompt shows your directory in yellow:
+		
+		\begin{center}
+			\includegraphics[width=\linewidth]{gitbash}
+		\end{center}
+		
+		\item  Enter the following commands to configure Git, modified to use your name and email address:
 
 		\begin{lstlisting}[language=bash,showstringspaces=false,gobble=12]
 			git config --global user.name "Your Name"
 			git config --global user.email your.name@manchester.ac.uk
 		\end{lstlisting}
-		\item In \textbf{Git Bash}, navigate to the folder containing the extracted contents of the zip file using the \texttt{cd} command. Change the path in the example command below as required:
-
+		
+		\item Enter the following commands to create a new Git repository, save a snapshot of the files, and start tracking any changes you make to them:
+		
 		\begin{lstlisting}[language=bash,showstringspaces=false,gobble=12]
-			cd P:/latex-course
 			git init
 			git add .
 			git commit -m "Initial commit"
 		\end{lstlisting}
 	\end{enumerate}
-The above commands will create a new Git repository, save a copy of the files, and start tracking any changes you make to them.
+
 
 \section{Customise the University Thesis Document}
 	For the following exercises, recompile the \texttt{thesis.tex} document after you have completed each set of changes.
