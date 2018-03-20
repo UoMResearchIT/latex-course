@@ -231,8 +231,7 @@
 		\item Natbib is a popular package capable of both numerical and author-year citations, and many formatting styles are available.
 		\item Recipe:
 		\begin{itemize}
-			\item A \textbf{\href{physics.bib}{.bib}} file containing Bib\TeX{}-formatted references ---
-			generate using e.g. \href{https://www.mendeley.com/}{Mendeley}
+			\item A \textbf{\href{physics.bib}{.bib}} file containing Bib\TeX{}-formatted references
 			\item \lstinline|\usepackage{natbib}| in your preamble
 			\item \lstinline|\bibliography{<file>}| makes your bibliography.
 			Note that the \textbf{.bib} file extension is not required.
@@ -241,6 +240,14 @@
 		\end{itemize}
 		\item Generate in-text citations using \lstinline|\citet{<key>}| and citations in parentheses using \lstinline|\citep{<key>}|
 			\item Demo (exercises to follow)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Generating a Bib\TeX{} database}
+	\begin{itemize}
+		\item There are a few example citations in the \textbf{.bib} file for you to practice with
+		\item You can generate a Bib\TeX{} database using your reference manager (e.g. \href{https://www.mendeley.com/}{Mendeley})
+		\item Many journals have a \textit{download Bib\TeX{} citation} option on their website - you can either import this into your reference manager or paste it into your \textbf{.bib} file directly
 	\end{itemize}
 \end{frame}
 
@@ -372,14 +379,6 @@
 	\end{center}
 	Thesis.tex is the document you compile.\\
 	The chapters are not complete \LaTeX{} documents; during compilation, the contents of each chapter file are inserted into the main thesis.tex file using the \lstinline|\include{file}| command.
-\end{frame}
-
-\begin{frame}{Generating a Bib\TeX{} database}
-	\begin{itemize}
-		\item The thesis template has a couple of example citations in the \textbf{.bib} file for you to practice with
-		\item You can generate a Bib\TeX{} database using your reference manager (e.g. Mendeley)
-		\item Many journals have a \textit{download Bib\TeX{} citation} option on their website - you can either import this into your reference manager or paste it into your \textbf{.bib} file directly
-	\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]{Alternative format thesis}{A collection of papers}
