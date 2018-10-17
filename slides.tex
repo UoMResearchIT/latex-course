@@ -293,16 +293,54 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{Floats}
+\begin{frame}[fragile]{Floats}{Figures}
 	\begin{itemize}
 		\item A \textit{float} is a container for something that cannot be broken over a page e.g. figures and tables
 		\item To create a figure, use the \texttt{figure} environment.
-		\item To display images, use the \lstinline|\includegraphics{file}| command from the \texttt{graphicx} package, which needs to be in your \hyperlink{sl:structure}{preamble}
+		\item To display images, your \hyperlink{sl:structure}{preamble} must include \lstinline|\usepackage{graphicx}|,  which gives access to the \lstinline|\includegraphics{}| command
+		\begin{lstlisting}[frame=single,gobble=16]
+		\begin{figure}
+		  \centering
+		  \includegraphics[]{imagefile}
+		  \label{fig:myfigure}
+		\end{figure}
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Floats}{Tables}
+	\begin{itemize}
+		\item Use the table environment
+		\item No extra packages required
+		\begin{lstlisting}[frame=single,gobble=16]
+		\begin{table}
+		  \centering
+		  \begin{tabular}{ l|c r }
+		    1 & 2 & 3 \\
+		    \hline
+		    4 & 5 & 6 \\
+		    7 & 8 & 9 \\
+		  \end{tabular}
+		  \label{tab:mytable}
+		  \caption{text}
+		\end{table}
+		\end{lstlisting}
+		\item \href{https://en.wikibooks.org/wiki/LaTeX/Tables}{More examples}		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Float placement}
+	\begin{itemize}
 		\item Generally \LaTeX{} does a good job of positioning floats, but you can pass specifiers to exercise more control over the placement of figures
-		\item \href{https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}{Figure examples and more placement options}
+		\begin{lstlisting}[frame=single,gobble=16]
+		\begin{figure}[htbp]
+		...
+		\end{lstlisting}
+		\item \href{https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}{More on figure and placement options}
 		\item \href{http://www.tex.ac.uk/FAQ-figurehere.html}{How to put a float exactly where you want it}
-		\item \href{https://en.wikibooks.org/wiki/LaTeX/Tables}{Tables}
+		
 		\item Demo (exercises next)
+		
 	\end{itemize}
 \end{frame}
 
