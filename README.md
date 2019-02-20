@@ -20,3 +20,9 @@ BibTeX can be simpler to set up, especially for teaching where the desktop envir
 
 ## Introductory slideshow
 The [introductory slideshow](https://slides.com/gcapes/latex/) contains links relating to Research IT, and the course feedback form.
+
+## Thesis template
+The afternoon session of the course introduces an
+[unofficial thesis template](https://github.com/gcapes/latex-thesis-template),
+which you are welcome to use at your own discretion.
+At the time of writing, the template complied with the then-current 2014 Presentation of Theses policy. Please ensure you check compliance with the current [Presentation of Theses policy](http://documents.manchester.ac.uk/DocuInfo.aspx?DocID=7420)
