@@ -15,3 +15,14 @@ Use the starred version of the figure environment
 ```
 ## Is there a UoM-styled beamer theme?
 There is an unofficial theme [here](https://github.com/mundya/unofficial-university-of-manchester-beamer).
+
+
+## How do I reference a page number?
+
+Use the `\pageref` macro instead of `\ref`.  
+
+```tex
+\pageref{key}
+```
+
+The `\pageref{key}` command displays the page number of where `\label{key}` was used.
