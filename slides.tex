@@ -67,6 +67,7 @@
 	\end{itemize}
 \end{frame}
 
+
 \section{What Is \LaTeX?}
 
 \begin{frame} \frametitle{What Is \LaTeX?}
@@ -78,33 +79,6 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame} \frametitle{Is it For Me?}
-	\framesubtitle{A few pros and cons}
-		\only<1>{
-		Advantages
-			\begin{itemize}
-				\item Produces beautiful, professional documents
-				\item Behaviour is reproducible, so can be debugged c.f. MS Word voodoo
-				\item Lots of packages (with documentation) to cater to your typesetting needs e.g. \href{http://www.ctan.org/}{CTAN}
-				\item Avoid Word version-compatibility problems
-				\item Footnotes, references, bibliographies, mathematical formulae easy to generate
-				\item Easier to manage large documents (smaller file size, images and chapters are separate files)
-				\item You can version-control your documents
-			\end{itemize}
-			}
-		\only<2>{
-		Disadvantages
-			\begin{itemize}
-				\item You will have to research how to solve some typesetting problems (\href{https://texdoc.org/}{texdoc}, stack exchange)
-				\item Easy to get distracted from writing by learning how to use a markup language
-				\item Your co-authors may be very resistant to commenting on a pdf instead of using `track changes' in Word
-			\end{itemize}
-			}
-\end{frame}
-
-
-\section{How \LaTeX{} Works}
-
 \begin{frame}[fragile] \frametitle{Some terminology}
 	\begin{itemize}
 		\item \TeX{} is a typesetting system. It is focussed on formatting.
@@ -114,6 +88,9 @@
 		\item TeXstudio is an IDE (i.e. a convenient way to prepare your source files, and compile them using \LaTeX{})
 	\end{itemize}
 \end{frame}
+
+
+\section{How \LaTeX{} Works}
 
 \begin{frame} \frametitle{The Software}	
 	\begin{center}
@@ -211,6 +188,30 @@
 		\item lists
 		\item inline maths mode
 	\end{itemize}
+\end{frame}
+
+\begin{frame} \frametitle{Is it For Me?}
+	\framesubtitle{A few pros and cons}
+	\only<1>{
+		Advantages
+		\begin{itemize}
+			\item Produces beautiful, professional documents
+			\item Behaviour is reproducible, so can be debugged c.f. MS Word voodoo
+			\item Lots of packages (with documentation) to cater to your typesetting needs e.g. \href{http://www.ctan.org/}{CTAN}
+			\item Avoid Word version-compatibility problems
+			\item Footnotes, references, bibliographies, mathematical formulae easy to generate
+			\item Easier to manage large documents (smaller file size, images and chapters are separate files)
+			\item You can version-control your documents
+		\end{itemize}
+	}
+	\only<2>{
+		Disadvantages
+		\begin{itemize}
+			\item You will have to research how to solve some typesetting problems (\href{https://texdoc.org/}{texdoc}, stack exchange)
+			\item Learning to use a markup language can distract from the process of writing
+			\item Your co-authors may be very resistant to commenting on a pdf instead of using `track changes' in Word
+		\end{itemize}
+	}
 \end{frame}
 
 \begin{frame}[fragile]{Author-Year citations}{Using the natbib package and Bib\TeX{} program}
