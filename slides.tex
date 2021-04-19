@@ -84,24 +84,21 @@
 		Advantages
 			\begin{itemize}
 				\item Produces beautiful, professional documents
-				\item There is almost certainly an elegant solution to your typesetting problem e.g. \href{http://www.ctan.org/}{CTAN}
-				\item You can logically work out how to solve an error (debugging a program) c.f. MS Word voodoo
-				\item Encourages you to focus on structure and content because the layout is done for you
+				\item Behaviour is reproducible, so can be debugged c.f. MS Word voodoo
+				\item Lots of packages (with documentation) to cater to your typesetting needs e.g. \href{http://www.ctan.org/}{CTAN}
+				\item Avoid Word version-compatibility problems
 				\item Footnotes, references, bibliographies, mathematical formulae easy to generate
 				\item Easier to manage large documents (smaller file size, images and chapters are separate files)
+				\item You can version-control your documents
 			\end{itemize}
 			}
 		\only<2>{
-		Disadvantages(?)
+		Disadvantages
 			\begin{itemize}
-				\item What you see isn't what you get as you write and edit
-				\item You will probably have to research how to solve some problems (\href{http://www.texdoc.net/}{texdoc}, stack exchange)
-				\item You will need to learn how to work with markup language
+				\item You will have to research how to solve some typesetting problems (\href{https://texdoc.org/}{texdoc}, stack exchange)
+				\item Easy to get distracted from writing by learning how to use a markup language
 				\item Your co-authors may be very resistant to commenting on a pdf instead of using `track changes' in Word
 			\end{itemize}
-			More:
-			
-			\href{http://ricardo.ecn.wfu.edu/~cottrell/wp.html}{Word processors: stupid and inefficient} by {Allin Cotrell}
 			}
 \end{frame}
 
@@ -110,9 +107,9 @@
 
 \begin{frame}[fragile] \frametitle{Some terminology}
 	\begin{itemize}
-		\item \TeX{} is the typesetting language/program. It is focussed on formatting.
-		\item \LaTeX{} is focussed on content, and includes macros (e.g. \lstinline|\section{}, \documentclass{}, \label{}|) to make using \TeX{} easier.\\
-		\LaTeX{} $\approx$ \TeX{} + macros. Further reading \href{https://www.texpad.com/support/latex/advanced/tex-vs-latex}{here} and  \href{http://www.tex.ac.uk/faq/FAQ-texthings.html}{here}.
+		\item \TeX{} is a typesetting system. It is focussed on formatting.
+		\item \LaTeX{} is a set of macros built on top of \TeX{} and the idea is to focus on content (e.g. \lstinline|\section{}, \documentclass{}|).\\
+		\LaTeX{} $\approx$ \TeX{} + macros.
 		\item Mik\TeX, Mac\TeX{} and \TeX{}Live are \TeX{} \textit{distributions} (i.e. \LaTeX{} executables and a collection of packages)
 		\item TeXstudio is an IDE (i.e. a convenient way to prepare your source files, and compile them using \LaTeX{})
 	\end{itemize}
