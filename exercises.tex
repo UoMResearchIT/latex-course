@@ -17,19 +17,9 @@
 
 \maketitle
 
-\section{Opening \TeX studio}
-	\begin{enumerate}
-		\item Navigate \texttt{Start > All Programs > Programming Languages > TeXstudio}
-		\item You may need to configure the application on first run; accept the defaults. This uses the TeXLive \LaTeX \ distribution that has already been installed.
-		\item Navigate the menus to \texttt{Options >  Configure TeXstudio > Build} and check that the default compiler is \texttt{PdfLaTeX}
-		\item Ensure that line numbers are visible in the editor window. If they are not, enable them using:
-
-		\texttt{Options > Configure TeXstudio\ldots{} > Show advanced options (bottom left checkbox) > Adv. Editor > Appearance > Show line numbers}
-	\end{enumerate}
-
 \section{Hello World!}
 	\begin{enumerate}
-		\item Create a new document. \texttt{File > New}.
+		\item Create a new document.
 		\item In the editor window, \emph{type} the following lines:
 			\begin{lstlisting}[gobble=16]
 				\documentclass{article}
@@ -38,22 +28,23 @@
 				\end{document}
 			\end{lstlisting}
 		\item Save the file.
-		\item Click on the \texttt{build and view} button.
+		\item Compile your document and view the output.
 	\end{enumerate}
 
 \section{My first latex document}
 	\begin{enumerate}
-		\item Open \href{first_latex_example.tex}{first\_latex\_example.tex} in \TeX{}studio
+		\item Open \href{first_latex_example.tex}{first\_latex\_example.tex} in your \LaTeX{} editor
 		\item Read through the file, taking note of whitespace and special characters -- these are described in the document
-		\item Click \texttt{Build \& View} to check your understanding of what you have just read
-		\item Try adding another section or subsection, then \texttt{Build \& View} again
+		\item Compile the document to check your understanding of what you have just read
+		\item Try adding another section or subsection, then recompiling
 		\item Add a table of contents using the \lstinline|\tableofcontents| command
 		\item Change the font size used for the whole document by changing the options given to the \lstinline|\documentclass| command e.g. \lstinline|\documentclass[12pt]{article}|
-		\item Open the documentation for the latex-document package: \\
+		\item Open the \href{https://mirror.ox.ac.uk/sites/ctan.org/info/latex2e-help-texinfo/latex2e.html#Document-class-options}{documentation} for the latex-document package. \\					
+		Locate the section on ``document class options'', find out what the default paper size is, and how to change the paper size to a4.
+		
+		If you are using \TeX{studio} the documentation can be found via: \\
 		\texttt{Help menu > Packages help\ldots{} > latex2e} or \\
 		right-click on \lstinline|\documentclass| \texttt{> Open package documentation}
-				
-		Locate the section on ``document class options'', find out what the default paper size is, and how to change the paper size to a4.
 		\item Make a numbered list using the following code as a basis
 		\begin{lstlisting}[gobble=12]
 			\begin{enumerate}
