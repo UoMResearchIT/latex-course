@@ -79,41 +79,17 @@ For this exercise, continue to modify the \texttt{first\_latex\_example.tex} fil
 \pagebreak
 
 \section{Download the University Thesis Document}
-	The following exercises use version control to track changes to your files. The aim is to demonstrate some of the benefits of using version control, and if you are interested in learning more you can apply to our \href{https://app.manchester.ac.uk/rgit}{version control course}. For now, just type the commands, or feel free to ignore the steps which use version control and focus on learning \LaTeX.
 	\begin{enumerate}
 		\item A zip file containing the current version of the University Thesis Document can be downloaded from the Github repository, \url{https://github.com/gcapes/latex-thesis-template}, using the \texttt{Clone or download} button. Ensure you have the correct branch selected --- this version of the course requires the \texttt{bibtex} branch to be selected.
-		\item Find the downloaded zip file in Windows explorer, then \texttt{right click > extract all}. A good choice of location to extract the zip archive to would be your P drive.
-		\item Use Windows explorer to navigate to the directory you just downloaded and extracted i.e. the directory which contains \texttt{thesis.tex}.
+		\item If you're following this course using overleaf.com,  you will need upload the zip file to a new project. If you're using \TeX{studio}, find the downloaded zip file in Windows explorer, then \texttt{right click > extract all}. A good choice of location to extract the zip archive to would be your P drive.
 		
-		Use the context menu (mouse right click) to open \textbf{Git Bash here}.
-		
-		You should see the prompt shows your directory in yellow:
-		
-		\begin{center}
-			\includegraphics[width=\linewidth]{gitbash}
-		\end{center}
-		
-		\item  Enter the following commands to configure Git, modified to use your name and email address:
-
-		\begin{lstlisting}[language=bash,showstringspaces=false,gobble=12]
-			git config --global user.name "Your Name"
-			git config --global user.email your.name@manchester.ac.uk
-		\end{lstlisting}
-		
-		\item Enter the following commands to create a new Git repository, save a snapshot of the files, and start tracking any changes you make to them:
-		
-		\begin{lstlisting}[language=bash,showstringspaces=false,gobble=12]
-			git init
-			git add .
-			git commit -m "Initial commit"
-		\end{lstlisting}
 	\end{enumerate}
 
 
 \section{Customise the University Thesis Document}
 	For the following exercises, recompile the \texttt{thesis.tex} document after you have completed each set of changes.
 		\begin{enumerate}
-			\item Open \texttt{thesis.tex} in \textbf{TeXstudio}. Find and modify the following lines, using your details:
+			\item Open \texttt{thesis.tex} in your editor. Find and modify the following lines, using your details:
 				\begin{lstlisting}[gobble=20]
 					\begin{document}
 					...
@@ -123,26 +99,16 @@ For this exercise, continue to modify the \texttt{first\_latex\_example.tex} fil
 					\school{The Author's school}
 					\faculty{The Author's faculty}
 				\end{lstlisting}
-			\item In \textbf{Git Bash} enter the following command:
-			\begin{lstlisting}[language=bash,showstringspaces=false,gobble=16]
-				git commit -am "Add author details"
-			\end{lstlisting}
+			
 			\item Find and modify the contents of the abstract (the abstract is located between \lstinline|\beforeabstract| and \lstinline|\afterabstract|).
-			\item In \textbf{Git Bash} enter the following command:
-				\begin{lstlisting}[language=bash,showstringspaces=false,gobble=20]
-					git commit -am "Add abstract"
-				\end{lstlisting}
-			\item Add some acknowledgments in the section immediately after \lstinline|\prefacesection{Acknowledgements}|.
-			\item In \textbf{Git Bash} enter the following commands. These will save the changes to \texttt{thesis.tex} and display the changes made since the previous commit:
-				\begin{lstlisting}[language=bash,showstringspaces=false,gobble=20]
-					git commit -am "Add acknowledgements"
-					git diff HEAD~
-				\end{lstlisting}
+		
+			\item In the section immediately after \lstinline|\prefacesection{Acknowledgements}|, add some acknowledgements.
+			
 		\end{enumerate}
 
 \section{Adding a Chapter}
 	\begin{enumerate}
-		\item In \textbf{TeXstudio}, create a new file for your chapter and save it as \texttt{mychapter.tex}
+		\item In your \LaTeX{} editor, create a new file for your chapter and save it as \texttt{mychapter.tex}
 		\item Type \lstinline|\chapter{Methodology}| in the editor window to define it as the start of a chapter.
 		\item Include your new chapter file in the main \texttt{thesis.tex} file after the other included \texttt{*.tex} files (near the end of the file). Start a new line and use the command \lstinline|\include{mychapter}|. This will include the file \texttt{mychapter.tex}.
 		\item In your new chapter file, try some different writing commands, using the following examples:
@@ -154,11 +120,6 @@ For this exercise, continue to modify the \texttt{first\_latex\_example.tex} fil
 				Math mode is contained within dollars, e.g. $\delta$.
 			\end{lstlisting}
 		\item Save the changes to your chapter file, then recompile the \texttt{thesis.tex} file.
-		\item In \textbf{Git Bash} enter the following commands to add your new file to the repository:
-		\begin{lstlisting}[language=bash,showstringspaces=false,gobble=12]
-			git add mychapter.tex
-			git commit -m "Add mychapter"
-		\end{lstlisting}
 	\end{enumerate}
 
 \section{Referencing}
@@ -172,19 +133,6 @@ For this exercise, continue to modify the \texttt{first\_latex\_example.tex} fil
 			\citealt{Payne2011}
 			\citep[e.g.][]{Porinchu2003}
 			\citep[][p.245]{Porinchu2003}
-		\end{lstlisting}
-		\item Commit your changes using the following Git command:
-		\begin{lstlisting}[language=bash,showstringspaces=false,gobble=12]
-			git commit -am "Add paragraph with references"
-		\end{lstlisting}
-		\item Deliberately introduce a compilation error by inserting a dollar sign in the middle of a command and trying to rebuild the \texttt{thesis.tex} document e.g. break one of the reference commands in your new chapter:
-		\begin{lstlisting}[gobble=12]
-			\cit$ep{Payne2011}
-		\end{lstlisting}
-		Now imagine you hadn't just deliberately introduced an error which is easy to find and fix. There are various approaches to solve this problem. Here is a version control solution to view changes made since the last known working version (your last commit), and then put the modified files back to the last known working version:
-		\begin{lstlisting}[language=bash,showstringspaces=false,gobble=12]
-			git diff HEAD		# Displays changes
-			git checkout HEAD .	# Restores your previous working state
 		\end{lstlisting}
 	\end{enumerate}
 
@@ -215,12 +163,6 @@ For this exercise, continue to modify the \texttt{first\_latex\_example.tex} fil
 		\end{lstlisting}
 		\item Try modifying the terms in the square brackets after \lstinline!\includegraphics!; experiment with \lstinline!\pageheight! or \lstinline!keepaspectratio!. Try using multiple terms separated with a comma (\lstinline!,!).
 		\item Now try the \lstinline!sidewaysfigure! environment. This uses the \texttt{rotating} package, so check whether you already have it in the preamble!
-		\item Run the following \textbf{Git} commands to commit your changes, and view a history of your project
-			\begin{lstlisting}[language=bash,showstringspaces=false,gobble=16]
-				git commit -am "Add figure to mychapter"
-				git log
-			\end{lstlisting}
-		With version control it's possible to restore your directory or individual files to the same state as any of the commits shown in your history.
 	\end{enumerate}
 
 \section{Drawing Tables}
@@ -243,7 +185,6 @@ For this exercise, continue to modify the \texttt{first\_latex\_example.tex} fil
 			\end{lstlisting}
 		\item Try adding a column for attendance by adding \lstinline!c! to the \lstinline!\begin{tabular}{lcc}! and some data to each row.
 		\item Remember cells are separated with an ampersand (\lstinline!&!), so you'll need to add this to each row.
-		\item Consider commiting your changes to your \textbf{Git} repository (and for the remaining exercises).
 	\end{enumerate}
 
 \section{Writing Equations}
